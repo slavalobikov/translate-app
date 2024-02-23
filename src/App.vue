@@ -1,11 +1,12 @@
 <script setup>
 import Header from './components/Header.vue';
+import BurgerMenu from './components/BurgerMenu.vue'
+
 </script>
 
 <template>
   <Header />
-  <router-link to="/">Home</router-link>
-  <router-link to="/about">About</router-link>
+<!--  <BurgerMenu />-->
   <router-view></router-view>
 </template>
 
