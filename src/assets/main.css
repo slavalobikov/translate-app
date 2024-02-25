@@ -68,12 +68,18 @@ select {
 }
 
 :root {
-    --width-menu: calc(100vw - 30%);
+    --width-menu: calc(100vw - 15%);
     --transition-click: 0.3s;
-    --menu-background: #FAFAFA;
+    --menu-background: rgba(246, 246, 246, 0.95);
     --body-backround: #f6f6f6;
+
+    --title-nav-color: #2e2e2e;
+    --title-nav-fz: 15px;
+    --active-click-color: #00bd00;
+    --black: #000000;
 }
 
 body {
+    font-family: Tahoma,Verdana,Arial;
     background-color: var(--body-backround);
 }

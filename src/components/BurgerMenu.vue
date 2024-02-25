@@ -7,12 +7,10 @@
     </button>
     <teleport to="body">
       <transition name="fade">
-        <div :class="{'menu-close' : !isOpen}" class="menu">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
+        <div :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}" class="menu">
+          <div class='wrapper-for-routes'>
+            <NavRoutes :toggleMenu="toggleMenu" />
+          </div>
         </div>
       </transition>
     </teleport>
@@ -21,18 +19,23 @@
 
 <script>
 import { ref } from 'vue';
+import NavRoutes from './NavRoutes.vue'
 
 export default {
+  components: { NavRoutes },
   setup() {
     const isOpen = ref(false);
+    const isEvenOpen = ref(false);
 
     const toggleMenu = () => {
       isOpen.value = !isOpen.value;
+      isEvenOpen.value = true;
     };
 
     return {
       isOpen,
       toggleMenu,
+      isEvenOpen
     };
   },
 };
@@ -81,12 +84,22 @@ export default {
   top:0;
   width: var(--width-menu);
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  animation: slide-in-left ease-in-out var(--transition-click) both;
+  background-color: var(--menu-background)/*rgba(0, 0, 0, 0.3)*/;
+  animation: slide-in-left ease-in-out var(--transition-click) forwards;
+  box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.41);
 }
 
 .menu-close {
-  animation: slide-to-left ease-in-out var(--transition-click) both;
+  animation: slide-to-left ease-in-out var(--transition-click) forwards;
+}
+
+.even-open-modal {
+  display: none;
+}
+
+.wrapper-for-routes {
+  margin-top: 45px;
+  padding: 10px;
 }
 
 .fade-enter-active, .fade-leave-active {
