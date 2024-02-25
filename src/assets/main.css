@@ -82,6 +82,10 @@ select {
     --active-click-color: #00bd00;
 
     --background-btn: #acacac;
+
+    --wrapper-content-padding: 7px;
+    --wrapper-content-border: 1px solid #c8c8c8;
+    --wrapper-content-background: #f1f1f1;
 }
 
 body {

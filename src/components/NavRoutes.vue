@@ -11,7 +11,7 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 </script>
 <template>
   <div>
-    <div class='wrapper-content'>
+    <div class='wrapper-content wrapper-content-logo'>
       <router-link @click='toggleMenu' :to="PATHS.HOME"><img class='logo' src='./../assets/logo.png' alt='logotype'></router-link>
     </div>
     <div class='title'>
@@ -66,9 +66,9 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 
   .wrapper-content {
     margin-top: 10px;
-    padding: 7px;
-    border: 1px solid #c8c8c8;
-    background-color: #f1f1f1;
+    padding: var(--wrapper-content-padding);
+    border: var(--wrapper-content-border);
+    background-color: var(--wrapper-content-background);
     display: flex;
     flex-direction: column;
   }
@@ -102,6 +102,16 @@ const { toggleMenu } = defineProps(['toggleMenu'])
   .wrapper-content-balance .link:first-of-type {
     text-decoration: underline;
     font-weight: 700;
+  }
+
+  .wrapper-content-logo {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    .wrapper-content-logo {
+      display: block;
+    }
   }
 
 </style>
