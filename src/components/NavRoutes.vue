@@ -1,6 +1,8 @@
 <script setup>
 import IconUsd from './icons/IconUsd.vue'
 import IconMail from './icons/IconMail.vue'
+import IconHome from './icons/IconHome.vue'
+import Button from './Button.vue'
 import IconQuestion from './icons/IconQuestion.vue'
 import { PATHS } from '../constants/PATHS'
 
@@ -9,12 +11,15 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 </script>
 <template>
   <div>
+    <div class='wrapper-content'>
+      <router-link @click='toggleMenu' :to="PATHS.HOME"><img class='logo' src='./../assets/logo.png' alt='logotype'></router-link>
+    </div>
     <div class='title'>
       <IconUsd />
       Ваш лицевой счет
     </div>
-    <div class='wrapper-content'>
-        <div class='title-block'>Баланс: $12.00 (€13.21)</div>
+    <div class='wrapper-content wrapper-content-balance'>
+        <div class='title-block'>Баланс: $12.00 (€11.21)</div>
         <router-link @click='toggleMenu' class='link' :to="PATHS.ADD_FUNDS">Пополнить счет</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.HISTORY">История операций</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.CHANGE_PASSWORD">Изменить пароль</router-link>
@@ -37,12 +42,17 @@ const { toggleMenu } = defineProps(['toggleMenu'])
     </div>
 
     <div class='wrapper-content'>
-      <button class='btn'>Выход</button>
+      <Button />
     </div>
   </div>
 </template>
 
 <style scoped>
+
+  .logo {
+    margin: 0 auto;
+  }
+
   .title {
     margin-top: 20px;
     display: flex;
@@ -89,10 +99,9 @@ const { toggleMenu } = defineProps(['toggleMenu'])
     font-weight: 700;
   }
 
-  .btn {
-    padding: 0 5px;
-    background: var(--background-btn);
-    color: var(--white)
+  .wrapper-content-balance .link:first-of-type {
+    text-decoration: underline;
+    font-weight: 700;
   }
 
 </style>
