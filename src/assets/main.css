@@ -71,6 +71,8 @@ select {
     --black: #000000;
     --white: #ffffff;
 
+    --common-gorizontal-margin: 20px;
+
     --width-menu: calc(100vw - 15%);
     --transition-click: 0.3s;
     --menu-background: rgba(246, 246, 246, 0.95);

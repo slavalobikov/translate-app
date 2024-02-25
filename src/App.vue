@@ -13,7 +13,7 @@ import Header from './components/Header.vue';
 
 <style scoped>
   .wrapper-head {
-    margin: 20px;
+    margin: 20px var(--common-gorizontal-margin) 0 var(--common-gorizontal-margin);
     display: none;
     padding: var(--wrapper-content-padding);
     border: var(--wrapper-content-border);
