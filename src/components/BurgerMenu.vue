@@ -98,7 +98,7 @@ export default {
 }
 
 .wrapper-for-routes {
-  margin-top: 45px;
+  margin-top: 25px;
   padding: 10px;
 }
 

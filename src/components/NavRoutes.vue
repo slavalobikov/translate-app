@@ -1,6 +1,7 @@
 <script setup>
 import IconUsd from './icons/IconUsd.vue'
 import IconMail from './icons/IconMail.vue'
+import IconQuestion from './icons/IconQuestion.vue'
 import { PATHS } from '../constants/PATHS'
 
 const { toggleMenu } = defineProps(['toggleMenu'])
@@ -22,6 +23,21 @@ const { toggleMenu } = defineProps(['toggleMenu'])
     <div class='title'>
       <IconMail />
       Ваша почта
+    </div>
+    <div class='wrapper-content wrapper-content-mail'>
+      <router-link @click='toggleMenu' class='link' :to="PATHS.MAILBOX_INBOX">Входящие</router-link>
+      <router-link @click='toggleMenu' class='link' :to="PATHS.MAILBOX_OUTBOX">Исходящие</router-link>
+      <router-link @click='toggleMenu' class='link' :to="PATHS.MAILBOX_SENTBOX">Отправленные</router-link>
+      <router-link @click='toggleMenu' class='link' :to="PATHS.MAILBOX_POST">Написать сообщение</router-link>
+    </div>
+
+    <div class='title'>
+      <IconQuestion />
+      Закончить?
+    </div>
+
+    <div class='wrapper-content'>
+      <button class='btn'>Выход</button>
     </div>
   </div>
 </template>
@@ -47,6 +63,10 @@ const { toggleMenu } = defineProps(['toggleMenu'])
     flex-direction: column;
   }
 
+  .wrapper-content-mail .link:first-child {
+    margin: 0;
+  }
+
   .title-block {
     font-size: 13px;
     color: #000;
@@ -62,6 +82,17 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 
   .link:active {
     color: var(--active-click-color);
+  }
+
+  .wrapper-content-mail .link {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  .btn {
+    padding: 0 5px;
+    background: var(--background-btn);
+    color: var(--white)
   }
 
 </style>

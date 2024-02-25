@@ -68,6 +68,9 @@ select {
 }
 
 :root {
+    --black: #000000;
+    --white: #ffffff;
+
     --width-menu: calc(100vw - 15%);
     --transition-click: 0.3s;
     --menu-background: rgba(246, 246, 246, 0.95);
@@ -75,8 +78,10 @@ select {
 
     --title-nav-color: #2e2e2e;
     --title-nav-fz: 15px;
+
     --active-click-color: #00bd00;
-    --black: #000000;
+
+    --background-btn: #acacac;
 }
 
 body {
