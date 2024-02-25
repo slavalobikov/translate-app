@@ -50,7 +50,7 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 <style scoped>
 
   .logo {
-    margin: 0 auto;
+    width: 100%;
   }
 
   .title {
