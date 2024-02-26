@@ -52,6 +52,10 @@ h2 {
   margin-bottom: 24px;
 }
 
+.str:last-of-type div:last-child {
+  text-align: end;
+}
+
 .str a {
   color: var(--black);
   text-decoration: none;
