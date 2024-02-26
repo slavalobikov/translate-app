@@ -1,10 +1,5 @@
 <template>
   <div class='wrapper'>
-<!--    <button @click="toggleMenu" :class="{ 'open': isOpen }" class="burger-button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>-->
     <teleport to="body">
       <transition name="fade">
         <div :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}" class="menu">
@@ -18,18 +13,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import NavRoutes from './NavRoutes.vue'
 
 const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 'isEvenOpen'])
 
-/*    const isOpen = ref(false);
-    const isEvenOpen = ref(false);
-
-    const toggleMenu = () => {
-      isOpen.value = !isOpen.value;
-      isEvenOpen.value = true;
-    };*/
 
 </script>
 
@@ -40,37 +27,7 @@ const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 
   z-index: 1;
   left: 10px;
 }
-/*
-.burger-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
 
-.burger-button span {
-  width: 20px;
-  height: 3px;
-  background-color: #333;
-  margin: 2.5px 0;
-  transition: transform var(--transition-click), opacity var(--transition-click);
-}
-
-.burger-button.open span:nth-child(1) {
-  transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.burger-button.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-button.open span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -5px);
-}
-*/
 
 .menu {
   position: fixed;

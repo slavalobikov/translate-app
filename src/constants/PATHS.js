@@ -7,4 +7,12 @@ export const PATHS = {
   MAILBOX_OUTBOX: '/mailbox-outbox',
   MAILBOX_SENTBOX: '/mailbox-sentbox',
   MAILBOX_POST: '/mailbox-post',
+  ABOUT: '/about',
+  TERMS_CONDITIONS: '/terms',
+  PRIVACY_POLICY: '/privacy-policy',
+  REFUND_POLICY: '/refund_policy',
+  OUR_SERVICE: '/our-service',
+  FAQ: '/questions',
+  JOB: '/job',
+  CONTACT: '/contact',
 }

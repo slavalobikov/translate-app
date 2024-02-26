@@ -1,5 +1,8 @@
 <script setup>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue'
+
+
 
 </script>
 
@@ -9,6 +12,7 @@ import Header from './components/Header.vue';
     <img class='head-img' src='./assets/head_ru.gif' alt='head'>
   </div>
   <router-view></router-view>
+  <Footer />
 </template>
 
 <style scoped>

@@ -11,11 +11,19 @@ const routes = [
   { path: PATHS.MAILBOX_OUTBOX, component: <div>Mai Outbox</div> },
   { path: PATHS.MAILBOX_SENTBOX, component: <div>Mai Sentbox</div> },
   { path: PATHS.MAILBOX_POST, component: <div>Mai Post</div> },
+  { path: PATHS.ABOUT, component: <div>about</div> },
+  { path: PATHS.TERMS_CONDITIONS, component: <div>terms and conditiums</div> },
+  { path: PATHS.PRIVACY_POLICY, component: <div>privacy policy</div> },
+  { path: PATHS.REFUND_POLICY, component: <div>refund policy</div> },
+  { path: PATHS.OUR_SERVICE, component: <div>out service</div> },
+  { path: PATHS.FAQ, component: <div>faq</div> },
+  { path: PATHS.JOB, component: <div>job</div> },
+  { path: PATHS.CONTACT, component: <div>contact</div> }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
 
 export default router

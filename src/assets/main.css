@@ -70,6 +70,7 @@ select {
 :root {
     --black: #000000;
     --white: #ffffff;
+    --gray: #5d5d5d;
 
     --common-gorizontal-margin: 20px;
 
