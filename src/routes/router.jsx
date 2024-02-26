@@ -2,9 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { PATHS } from '../constants/PATHS'
 import Home from './../pages/Home.vue'
 
-
 const routes = [
-  { path: PATHS.HOME, component: <Home /> },
+  { path: PATHS.HOME, component: Home },
   { path: PATHS.ADD_FUNDS, component: <div>add founds</div> },
   { path: PATHS.HISTORY, component: <div>history</div> },
   { path: PATHS.CHANGE_PASSWORD, component: <div>Change password</div> },

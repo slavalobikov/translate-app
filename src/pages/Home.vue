@@ -1,3 +1,5 @@
+<script setup>
+</script>
 <template>
   <h3 class='title'>Translation.Gallery - Многоязычная почтовая служба</h3>
   <div class='wrapper-content'>
