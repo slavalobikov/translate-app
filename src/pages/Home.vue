@@ -69,13 +69,13 @@
 
 .wrapper-content p {
   text-align: justify;
-  font-size: 13px;
+  font-size: var(--wrapper-content-fz);
   margin: 20px 0;
 }
 
 .last-p {
   text-align: justify;
-  font-size: 13px;
+  font-size: var(--wrapper-content-fz);
   margin: 20px 0 40px 0;
 }
 
@@ -89,6 +89,6 @@ ul, li {
 
 strong {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: var(--wrapper-content-fz);
 }
 </style>

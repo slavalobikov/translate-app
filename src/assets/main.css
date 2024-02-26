@@ -86,6 +86,9 @@ select {
 
     --background-btn: #acacac;
 
+    --title-wrapper-fz: 14px;
+    --wrapper-content-border-white: 1px solid #e5e5e5;
+    --wrapper-content-fz: 13px;
     --wrapper-content-padding: 7px;
     --wrapper-content-border: 1px solid #c8c8c8;
     --wrapper-content-background: #f1f1f1;
