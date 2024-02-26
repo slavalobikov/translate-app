@@ -50,7 +50,7 @@ const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 
 
 .wrapper-for-routes {
   margin-top: 25px;
-  padding: 10px;
+  padding: var(--padding-mobile-menu);
 }
 
 .fade-enter-active, .fade-leave-active {

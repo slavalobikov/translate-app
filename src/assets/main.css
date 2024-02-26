@@ -74,9 +74,11 @@ select {
 
     --common-gorizontal-margin: 20px;
 
-    --width-menu: calc(100vw - 15%);
+
+    --width-menu: calc(180px + var(--wrapper-content-padding) * 2 + var(--padding-mobile-menu) * 2)/*calc(100vw - 15%)*/;
+    --padding-mobile-menu: 10px;
     --transition-click: 0.3s;
-    --menu-background: rgba(246, 246, 246, 0.95);
+    --menu-background: rgba(246, 246, 246, 1);
     --body-backround: #f6f6f6;
 
     --title-nav-color: #2e2e2e;
