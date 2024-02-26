@@ -32,7 +32,7 @@ import { PATHS } from '../constants/PATHS'
     <div class='images'>
       <img class='mastercard' src='./../assets/mastercard.png' alt='mastercard'>
       <img class='visa' src='./../assets/visa.png' alt='visa'>
-      <img class='pcicompliant' src='./../assets/pcicompliant.png' alt='pcicompliant'>
+      <img class='pcicompliant' src='./../assets/pci.svg' alt='pcicompliant'>
     </div>
     <div class='text-logo label-c'>© 2018 Translation.Gallery</div>
   </footer>
@@ -70,7 +70,7 @@ ul li {
 }
 
 .label-c {
-  text-align: right;
+  text-align: center;
   margin-top: 10px;
 }
 
@@ -83,7 +83,7 @@ ul li {
 }
 
 .mastercard {
-  width: 113px;
+  width: 50px;
 }
 
 .visa {
@@ -92,6 +92,5 @@ ul li {
 
 .pcicompliant {
   width: 50px;
-  height: 30px;
 }
 </style>
