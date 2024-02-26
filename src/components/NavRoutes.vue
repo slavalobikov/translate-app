@@ -5,8 +5,11 @@ import IconHome from './icons/IconHome.vue'
 import Button from './Button.vue'
 import IconQuestion from './icons/IconQuestion.vue'
 import { PATHS } from '../constants/PATHS'
+import { inject } from 'vue'
 
 const { toggleMenu } = defineProps(['toggleMenu'])
+
+const balance = inject('balance', '$00.00 (€00.00)');
 
 </script>
 <template>
@@ -19,7 +22,7 @@ const { toggleMenu } = defineProps(['toggleMenu'])
       Ваш лицевой счет
     </div>
     <div class='wrapper-content wrapper-content-balance'>
-        <div class='title-block'>Баланс: $12.00 (€11.21)</div>
+        <div class='title-block'>Баланс: {{ balance }}</div>
         <router-link @click='toggleMenu' class='link' :to="PATHS.ADD_FUNDS">Пополнить счет</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.HISTORY">История операций</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.CHANGE_PASSWORD">Изменить пароль</router-link>

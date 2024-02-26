@@ -1,9 +1,10 @@
 <script setup>
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue'
+import { provide } from 'vue';
 
 
-
+provide('balance', '$12.00 (€11.21)');
 </script>
 
 <template>

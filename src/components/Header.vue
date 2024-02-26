@@ -1,9 +1,12 @@
 <script setup>
 import BurgerMenu from './BurgerMenu.vue'
 import IconMail from './icons/IconMail.vue'
-import { ref } from 'vue'
+import { inject, ref } from 'vue'
 import router from '../routes/router'
 import { PATHS } from '../constants/PATHS'
+
+const balance = inject('balance', '$00.00 (€00.00)');
+
 
 const isOpen = ref(false);
 const isEvenOpen = ref(false);
@@ -23,6 +26,7 @@ const clickMessage = () => {
   <header>
     <h1 class='h1'>
       <BurgerMenu :toggleMenu="toggleMenu" :isOpen="isOpen" :isEvenOpen="isEvenOpen" />
+      <router-link class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>
       <button @click='clickMessage' class='message-wrapper'>
         <IconMail />
         <div class='count-unread'>
@@ -126,6 +130,16 @@ const clickMessage = () => {
     justify-content: center;
     align-items: center;
     padding: 0 6px;
+  }
+
+  .balance {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--icon-color);
+  }
+
+  .balance:active {
+    color: #00bd00;
   }
 
 </style>
