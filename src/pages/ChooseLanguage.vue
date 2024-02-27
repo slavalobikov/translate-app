@@ -73,6 +73,14 @@ ul {
   text-align: center;
 }
 
+.li:nth-child(odd) {
+  text-align: start;
+}
+
+.li:nth-child(even ) {
+  text-align: end;
+}
+
 ul li:last-child {
   grid-column: span 2;
   justify-self: center;
