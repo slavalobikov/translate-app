@@ -9,9 +9,9 @@ provide('balance', '$12.00 (€11.21)');
 
 <template>
   <Header />
-  <div class='wrapper-head'>
+<!--  <div class='wrapper-head'>
     <img class='head-img' src='./assets/head_ru.gif' alt='head'>
-  </div>
+  </div>-->
   <router-view></router-view>
   <Footer />
 </template>

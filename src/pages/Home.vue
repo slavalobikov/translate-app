@@ -1,6 +1,9 @@
 <script setup>
 </script>
 <template>
+  <div class='wrapper-head'>
+    <img class='head-img' src='./../assets/head_ru.gif' alt='head'>
+  </div>
   <h3 class='title'>Translation.Gallery - Многоязычная почтовая служба</h3>
   <div class='wrapper-content'>
     <p>
@@ -90,5 +93,23 @@ ul, li {
 strong {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: var(--wrapper-content-fz);
+}
+
+.wrapper-head {
+  margin: 20px var(--common-gorizontal-margin) 0 var(--common-gorizontal-margin);
+  display: none;
+  padding: var(--wrapper-content-padding);
+  border: var(--wrapper-content-border);
+  background-color: var(--wrapper-content-background);
+}
+
+.head-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper-head {
+    display: block;
+  }
 }
 </style>

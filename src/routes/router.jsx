@@ -21,7 +21,8 @@ const routes = [
   { path: PATHS.OUR_SERVICE, component: <div>out service</div> },
   { path: PATHS.FAQ, component: <div>faq</div> },
   { path: PATHS.JOB, component: <div>job</div> },
-  { path: PATHS.CONTACT, component: <div>contact</div> }
+  { path: PATHS.CONTACT, component: <div>contact</div> },
+  { path: PATHS.TERMS_OF_USE, component: <div>term of use</div>}
 ]
 
 const router = createRouter({

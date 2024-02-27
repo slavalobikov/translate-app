@@ -10,12 +10,19 @@
       </transition>
     </teleport>
   </div>
+  <div @click='handleAllPageClick' v-if='isOpen' class='all-page-wrapper'>
+
+  </div>
 </template>
 
 <script setup>
 import NavRoutes from './NavRoutes.vue'
-
 const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 'isEvenOpen'])
+
+const handleAllPageClick = () => {
+  toggleMenu()
+}
+
 
 
 </script>
@@ -59,6 +66,12 @@ const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.all-page-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
 }
 
 

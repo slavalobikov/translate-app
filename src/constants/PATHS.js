@@ -15,4 +15,5 @@ export const PATHS = {
   FAQ: '/questions',
   JOB: '/job',
   CONTACT: '/contact',
+  TERMS_OF_USE: '/terms-of-use'
 }

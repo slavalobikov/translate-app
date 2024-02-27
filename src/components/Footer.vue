@@ -3,7 +3,8 @@ import { PATHS } from '../constants/PATHS'
 </script>
 <template>
   <footer>
-    <ul>
+    <router-link class='link-to-terms' :to='PATHS.TERMS_OF_USE'>Terms of use</router-link>
+<!--    <ul>
       <li>
         <router-link class='link' :to='PATHS.ABOUT'>О <span class='text-logo'>Translation.Gallery</span></router-link>
       </li>
@@ -28,7 +29,7 @@ import { PATHS } from '../constants/PATHS'
       <li>
         <router-link class='link' :to='PATHS.CONTACT'>Обратная связь</router-link>
       </li>
-    </ul>
+    </ul>-->
     <div class='images'>
       <img class='mastercard' src='./../assets/mastercard.png' alt='mastercard'>
       <img class='visa' src='./../assets/visa.png' alt='visa'>
@@ -42,6 +43,11 @@ import { PATHS } from '../constants/PATHS'
 footer {
   margin: var(--common-gorizontal-margin);
   font-size: 13px;
+
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  align-items: center;
 }
 
 .link {
@@ -92,5 +98,11 @@ ul li {
 
 .pcicompliant {
   width: 50px;
+}
+
+.link-to-terms {
+  margin: 0 auto;
+  color: var(--gray);
+  text-decoration: none;
 }
 </style>
