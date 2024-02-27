@@ -108,14 +108,4 @@ const balance = inject('balance', '$00.00 (€00.00)');
     font-weight: 700;
   }
 
-  .wrapper-content-logo {
-    display: none;
-  }
-
-  @media screen and (max-width: 480px) {
-    .wrapper-content-logo {
-      display: block;
-    }
-  }
-
 </style>
