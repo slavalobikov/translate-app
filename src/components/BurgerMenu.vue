@@ -2,7 +2,7 @@
   <div class='wrapper'>
     <teleport to="body">
       <transition name="fade">
-        <div :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}" class="menu">
+        <div ref='swipeElement' :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}" class="menu">
           <div class='wrapper-for-routes'>
             <NavRoutes :toggleMenu="toggleMenu" />
           </div>
@@ -17,11 +17,24 @@
 
 <script setup>
 import NavRoutes from './NavRoutes.vue'
+
+import { onMounted, ref } from 'vue'
+import Hammer from 'hammerjs'
 const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 'isEvenOpen'])
 
+const swipeElement = ref(null)
 const handleAllPageClick = () => {
   toggleMenu()
 }
+
+const onSwipeLeft = () => {
+  toggleMenu()
+}
+
+onMounted(() => {
+  const hammer = new Hammer(swipeElement.value);
+  hammer.on('swipeleft', onSwipeLeft);
+});
 
 
 

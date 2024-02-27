@@ -5,27 +5,16 @@ import IconHome from './icons/IconHome.vue'
 import Button from './Button.vue'
 import IconQuestion from './icons/IconQuestion.vue'
 import { PATHS } from '../constants/PATHS'
-import { inject, onMounted, ref } from 'vue'
-import Hammer from 'hammerjs';
+import { inject } from 'vue'
 
-const swipeElement = ref(null);
 
 const { toggleMenu } = defineProps(['toggleMenu'])
 
 const balance = inject('balance', '$00.00 (€00.00)');
 
-const onSwipeLeft = () => {
-  toggleMenu()
-}
-
-onMounted(() => {
-  const hammer = new Hammer(swipeElement.value);
-  hammer.on('swipeleft', onSwipeLeft);
-});
-
 </script>
 <template>
-  <div ref='swipeElement'>
+  <div>
     <div class='wrapper-content wrapper-content-logo'>
       <router-link @click='toggleMenu' :to="PATHS.HOME"><img class='logo' src='./../assets/logo.png' alt='logotype'></router-link>
     </div>
