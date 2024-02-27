@@ -27,6 +27,7 @@ const balance = inject('balance', '$00.00 (€00.00)');
         <router-link @click='toggleMenu' class='link' :to="PATHS.ADD_FUNDS">Пополнить счет</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.HISTORY">История операций</router-link>
         <router-link @click='toggleMenu' class='link' :to="PATHS.CHANGE_PASSWORD">Изменить пароль</router-link>
+        <router-link @click='toggleMenu' class='link' :to="PATHS.CHOOSE_LANG">Test</router-link>
     </div>
 
     <div class='title'>

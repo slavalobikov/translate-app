@@ -5,6 +5,7 @@ import About from './../pages/About.vue'
 import Terms from './../pages/Terms.vue'
 import Privacy from './../pages/Privacy.vue'
 import TermsOfUse from './../pages/TermsOfUse.vue'
+import ChooseLanguage from './../pages/ChooseLanguage.vue'
 
 const routes = [
   { path: PATHS.HOME, component: Home },
@@ -23,7 +24,8 @@ const routes = [
   { path: PATHS.FAQ, component: <div>faq</div> },
   { path: PATHS.JOB, component: <div>job</div> },
   { path: PATHS.CONTACT, component: <div>contact</div> },
-  { path: PATHS.TERMS_OF_USE, component: TermsOfUse}
+  { path: PATHS.TERMS_OF_USE, component: TermsOfUse},
+  {path: PATHS.CHOOSE_LANG, component: ChooseLanguage}
 ]
 
 const router = createRouter({
