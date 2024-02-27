@@ -3,72 +3,52 @@
   <div class='wrapper-content'>
     <h2>
       Present disclaimer reflects terms and conditions of rendering and use of
-    <span class='logo-text'>
-      Translation.Gallery
-    </span>
+      <TranslationGallery />
       services.
     </h2>
     <p>
       The service of
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       is provided to individuals who are at least 18 years old. By purchasing services on
-      <span class='logo-text'>
-      Translation.Gallery
-    </span>
+      <TranslationGallery />
       you are stating that you agree to be bound by all of these terms and conditions of the service.
     </p>
     <p>
       Member account, password, security <br />
       To open an account and have access to
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       services, you must complete the registration process by providing us with current, complete
       and accurate information as prompted by the registration form. Then you choose a password.
       Being
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       member you are entirely responsible for the content of materials and information placed at our
       website, as well as for maintaining the confidentiality of your password and account.
       Furthermore, you are entirely responsible for any and all activities that occur under
       your account. You also agree to notify
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       staff about any unauthorized use of your account or any other security violation of the system.
     </p>
     <p>
       Member  Privacy <br />
       Any information provided by our users is strictly confidential and cannot be provided to other
       companies or individuals as well as be an object of exchange or selling. When paying for
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       translation services you provide your payment card details not to
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       but to the processing company securing all the transactions with payment cards.
     </p>
 
     <p>
       Message storage <br />
       You agree that
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       is not responsible or liable for the deletion or failure to store messages or other information.
     </p>
 
     <p>
       Member Conduct <br />
       As a condition of your use of the service, you warrant to
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       that you will not use the service for any purpose that is unlawful or contradictory to these
       terms, conditions and notices.
     </p>
@@ -82,9 +62,7 @@
       any material that contains viruses, trojan horses, worms, time bombs, cancel bots, or any
       other harmful or deleterious programs; attempt to get unauthorized access to the service,
       other accounts, computer systems or networks connected to
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       service, through password mining or any other means; publish advertising, as well as e-mails,
       links, postal addresses, telephone numbers and other contact information; mislead or
       persecute other users.
@@ -93,38 +71,24 @@
       Disclaimers/Limitation of liability <br />
       The information and services included in or available through the service may include
       inaccuracies or typographical errors. Changes are periodically added to the information herein.
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       team may make improvements and/or changes in the service at any time. <br />
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       does not represent or warrant that the service will be uninterrupted or error-free. However
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       staff will do their best to make all the necessary improvements as soon as possible.
       <br />
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       administration reserves the right to delete any profile without any notification or explanation.
     </p>
     <p>
       Modifications to Disclaimer <br />
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       reserves the right to change the terms and conditions for use of
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       services without any additional notification. You are responsible for regularly reviewing the
       terms. Continued use of
-      <span class='logo-text'>
-      Translation.Gallery
-      </span>
+      <TranslationGallery />
       service after any such changes shall constitute your consent to such modifications.
     </p>
 
@@ -157,8 +121,8 @@
     margin-top: 12px;
   }
 
-  .logo-text {
-    font-family: Tahoma, Verdana, Arial;
-  }
-
 </style>
+<script setup>
+import TranslationGallery from '../components/TranslationGallery.vue'
+
+</script>

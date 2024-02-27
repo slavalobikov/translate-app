@@ -1,5 +1,8 @@
 <script setup>
-import {PATHS} from './../constants/PATHS'
+import { PATHS } from './../constants/PATHS'
+import TranslationGallery from './../components/TranslationGallery.vue'
+import TranslateSlogan from './../components/TranslateTaglineOnEndMessage.vue'
+
 </script>
 <template>
   <h2>Политика конфиденциальности</h2>
@@ -199,7 +202,8 @@ import {PATHS} from './../constants/PATHS'
                 (IV)
               </div>
               <div>
-                ПРЕДОТВРАЩАТЬ ПОТЕНЦИАЛЬНО ОПСНЫЕ ИЛИ НЕЗАКОННЫЕ ДЕЙСТВИЯ, ПРИВОДИТЬ В ДЕЙСТВИЕ НАШЕ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ;
+                ПРЕДОТВРАЩАТЬ ПОТЕНЦИАЛЬНО ОПСНЫЕ ИЛИ НЕЗАКОННЫЕ ДЕЙСТВИЯ, ПРИВОДИТЬ В ДЕЙСТВИЕ НАШЕ ПОЛЬЗОВАТЕЛЬСКОЕ
+                СОГЛАШЕНИЕ;
               </div>
             </div>
             <div class='number-wrapper'>
@@ -301,9 +305,10 @@ import {PATHS} from './../constants/PATHS'
             КОНФИДЕНЦИАЛЬНОСТИ.
           </div>
         </div>
-        </div>
+      </div>
       <div class='p'>
-        6. МЫ МОЖЕМ СОБИРАТЬ ПЕРСОНАЛЬНЫЕ ДАННЫЕ С ЦЕЛЬЮ АНАЛИЗИРОВАНИЯ. В ЭТОМ СЛУЧАЕ МЫ ПРИКЛАДЫВАЕМ ВСЕ УСИЛИЯ, ЧТОБЫ ПОЛЬЗОВАТЕЛИ ОСТАЛИСЬ АНОНИМНЫМИ.
+        6. МЫ МОЖЕМ СОБИРАТЬ ПЕРСОНАЛЬНЫЕ ДАННЫЕ С ЦЕЛЬЮ АНАЛИЗИРОВАНИЯ. В ЭТОМ СЛУЧАЕ МЫ ПРИКЛАДЫВАЕМ ВСЕ УСИЛИЯ, ЧТОБЫ
+        ПОЛЬЗОВАТЕЛИ ОСТАЛИСЬ АНОНИМНЫМИ.
       </div>
       <div class='p'>
         7. МЫ ПРИКЛАДЫВАЕМ ВСЕ УСИЛИЯ ДЛЯ ЗАЩИТЫ ПЕРСОНАЛЬНЫХ ДАННЫХ, КОТОРЫЕ МЫ СОБИРАЕМ. ЧТОБЫ
@@ -342,75 +347,63 @@ import {PATHS} from './../constants/PATHS'
           <div class='symbol' />
           <div class='symbol-text'>
             ЕСЛИ У ВАС ВОЗНИКЛИ ВОПРОСЫ ИЛИ ПРЕДЛОЖЕНИЯ ПО НАСТОЯЩЕЙ ПОЛИТИКЕ КОНФИДЕНЦИАЛЬНОСТИ,
-            ПОЖАЛУЙСТА, <router-link class='link' :to="PATHS.CONTACT">СВЯЖИТЕСЬ С НАМИ</router-link>.
+            ПОЖАЛУЙСТА,
+            <router-link class='link' :to='PATHS.CONTACT'>СВЯЖИТЕСЬ С НАМИ</router-link>
+            .
           </div>
         </div>
 
       </div>
-
-      <div class='strong'>
-                <span class='logo-text'>
-          Translation.Gallery
-        </span> <br />
-        Делает мир ближе!
-      </div>
+      <TranslateSlogan />
     </div>
   </div>
 </template>
 
 <style scoped>
-  h2 {
-    font-weight: 400;
-    font-size: var(--title-wrapper-fz);
-    margin: var(--common-gorizontal-margin) calc(var(--common-gorizontal-margin) * 2) 0 calc(var(--common-gorizontal-margin) * 2);
-  }
+h2 {
+  font-weight: 400;
+  font-size: var(--title-wrapper-fz);
+  margin: var(--common-gorizontal-margin) calc(var(--common-gorizontal-margin) * 2) 0 calc(var(--common-gorizontal-margin) * 2);
+}
 
-  .wrapper-content {
-    margin: 0 var(--common-gorizontal-margin);
-    border: var(--wrapper-content-border-white);
-    padding-top: 10px;
-  }
+.wrapper-content {
+  margin: 0 var(--common-gorizontal-margin);
+  border: var(--wrapper-content-border-white);
+  padding-top: 10px;
+}
 
-  .wrapper-content .wrapper {
-    margin: var(--common-gorizontal-margin);
-  }
+.wrapper-content .wrapper {
+  margin: var(--common-gorizontal-margin);
+}
 
-  .wrapper-content .wrapper p, .wrapper-content .wrapper .p {
-    margin: 13px 0;
-    font-size: var(--wrapper-content-fz);
-  }
+.wrapper-content .wrapper p, .wrapper-content .wrapper .p {
+  margin: 13px 0;
+  font-size: var(--wrapper-content-fz);
+}
 
-  .wrapper-symbol {
-    display: flex;
-  }
+.wrapper-symbol {
+  display: flex;
+}
 
-  .wrapper-symbol .symbol {
-    margin: 0 7px;
-  }
+.wrapper-symbol .symbol {
+  margin: 0 7px;
+}
 
-  .symbol-text {
-    font-size: calc(var(--wrapper-content-fz) + 1px);
-  }
+.symbol-text {
+  font-size: calc(var(--wrapper-content-fz) + 1px);
+}
 
-  .number-wrapper {
-    display: flex;
-    font-size: var(--wrapper-content-fz);
-  }
+.number-wrapper {
+  display: flex;
+  font-size: var(--wrapper-content-fz);
+}
 
-  .number-wrapper .number {
-    margin: 0 7px;
-  }
+.number-wrapper .number {
+  margin: 0 7px;
+}
 
-  .link {
-    color: var(--title-nav-color);
-  }
+.link {
+  color: var(--title-nav-color);
+}
 
-  .logo-text {
-    font-family: Tahoma, Verdana, Arial;
-  }
-
-  .strong {
-    margin-top: 45px;
-    font-weight: bold;
-  }
 </style>

@@ -1,3 +1,7 @@
+<script setup>
+import TranslationTagline from './../components/TranslateTaglineOnEndMessage.vue'
+
+</script>
 <template>
   <h2>Translation.Gallery - Correspondence address</h2>
   <div class='wrapper-content'>
@@ -17,10 +21,7 @@
         PH Grand Tower, Torre B, local 13i, Punta Pacifica, San Francisco, Panama City, Panama
       </div>
     </div>
-    <strong class='strong'>
-      Translation.Gallery <br />
-      Makes the world closer!
-    </strong>
+    <TranslationTagline />
   </div>
 </template>
 
@@ -48,9 +49,6 @@ h2 {
   margin-right: 10px;
 }
 
-.str:last-of-type {
-  margin-bottom: 24px;
-}
 
 .str:last-of-type div:last-child {
   text-align: end;
