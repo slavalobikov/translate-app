@@ -73,6 +73,11 @@ ul {
   text-align: center;
 }
 
+ul li:last-child {
+  grid-column: span 2;
+  justify-self: center;
+}
+
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 13vw;
