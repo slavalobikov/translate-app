@@ -1,10 +1,14 @@
 <template>
   <div class='wrapper'>
-    <teleport to="body">
-      <transition name="fade">
-        <div ref='swipeElement' :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}" class="menu">
-          <div class='wrapper-for-routes'>
-            <NavRoutes :toggleMenu="toggleMenu" />
+    <teleport to='body'>
+      <transition name='fade'>
+        <div :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}"
+             class='menu'>
+          <div ref='swipeElement' class='overflow'>
+            <div class='cross-block' />
+            <div class='wrapper-for-routes'>
+              <NavRoutes :toggleMenu='toggleMenu' />
+            </div>
           </div>
         </div>
       </transition>
@@ -20,6 +24,7 @@ import NavRoutes from './NavRoutes.vue'
 
 import { onMounted, ref } from 'vue'
 import Hammer from 'hammerjs'
+
 const { toggleMenu, isOpen, isEvenOpen } = defineProps(['toggleMenu', 'isOpen', 'isEvenOpen'])
 
 const swipeElement = ref(null)
@@ -32,10 +37,9 @@ const onSwipeLeft = () => {
 }
 
 onMounted(() => {
-  const hammer = new Hammer(swipeElement.value);
-  hammer.on('swipeleft', onSwipeLeft);
-});
-
+  const hammer = new Hammer(swipeElement.value)
+  hammer.on('swipeleft', onSwipeLeft)
+})
 
 
 </script>
@@ -51,13 +55,13 @@ onMounted(() => {
 
 .menu {
   position: fixed;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   width: var(--width-menu);
   bottom: 0;
   background-color: var(--menu-background);
   animation: slide-in-left ease-in-out var(--transition-click) forwards;
-  box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.41);
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.41);
 }
 
 .menu-close {
@@ -68,9 +72,23 @@ onMounted(() => {
   display: none;
 }
 
+.overflow {
+  height: 100%;
+  overflow: auto;
+}
+
+.cross-block {
+  height: calc(25px + var(--padding-mobile-menu));
+  background: var(--menu-background);
+  position: sticky;
+  top: 0;
+}
+
 .wrapper-for-routes {
+/*
   margin-top: 25px;
-  padding: var(--padding-mobile-menu);
+*/
+  padding: 0 var(--padding-mobile-menu) var(--padding-mobile-menu) var(--padding-mobile-menu);
 }
 
 .fade-enter-active, .fade-leave-active {
