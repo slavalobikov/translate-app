@@ -69,9 +69,9 @@ const configLang = ref([
 
 .circle {
   position: absolute;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
   left: 50%;
-  right: 50%;
   height: 500px;
   width: 500px;
   border: red solid 3px;
