@@ -5,7 +5,7 @@ import About from './../pages/About.vue'
 import Terms from './../pages/Terms.vue'
 import Privacy from './../pages/Privacy.vue'
 import TermsOfUse from './../pages/TermsOfUse.vue'
-import ChooseLanguage from './../pages/ChooseLanguage.vue'
+import ChooseLanguage from '../pages/ChooseLanguage.vue'
 
 const routes = [
   { path: PATHS.HOME, component: Home },

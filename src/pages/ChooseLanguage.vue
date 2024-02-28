@@ -27,7 +27,7 @@ const configLang = ref([
       <div class='logo'>
         <span class='green_logo'>Trans</span>lation
       </div>
-<!--      <div class='circle' />-->
+      <!--      <div class='circle' />-->
       <div class='language russian'>русский</div>
       <div class='language korean'>한국어</div>
       <div class='language arabic'>العربية</div>
@@ -43,12 +43,17 @@ const configLang = ref([
       <div class='language spanish'>español</div>
       <div class='language suomi'>suomi</div>
       <div class='language portuguese'>português</div>
-      <div class='language japanese'>japanese</div>
+      <div class='language japanese'>日本語</div>
       <div class='language french'>français</div>
     </div>
   </div>
 </template>
 <style scoped>
+
+/*
+  vw for 1024px
+*/
+
 .green_logo {
   color: var(--active-click-color);
 }
@@ -67,51 +72,17 @@ const configLang = ref([
   perspective: var(--perspective);
 }
 
-.circle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  height: 500px;
-  width: 500px;
-  border: red solid 3px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #FF0000 0deg calc(360deg / 17),
-    #FF4500 calc(360deg / 17) calc(2 * 360deg / 17),
-    #FFA500 calc(2 * 360deg / 17) calc(3 * 360deg / 17),
-    #FFD700 calc(3 * 360deg / 17) calc(4 * 360deg / 17),
-    #FFFF00 calc(4 * 360deg / 17) calc(5 * 360deg / 17),
-    #ADFF2F calc(5 * 360deg / 17) calc(6 * 360deg / 17),
-    #7FFF00 calc(6 * 360deg / 17) calc(7 * 360deg / 17),
-    #00FF00 calc(7 * 360deg / 17) calc(8 * 360deg / 17),
-    #00FA9A calc(8 * 360deg / 17) calc(9 * 360deg / 17),
-    #00CED1 calc(9 * 360deg / 17) calc(10 * 360deg / 17),
-    #4169E1 calc(10 * 360deg / 17) calc(11 * 360deg / 17),
-    #800080 calc(11 * 360deg / 17) calc(12 * 360deg / 17),
-    #9932CC calc(12 * 360deg / 17) calc(13 * 360deg / 17),
-    #8B4513 calc(13 * 360deg / 17) calc(14 * 360deg / 17),
-    #A0522D calc(14 * 360deg / 17) calc(15 * 360deg / 17),
-    #FF8C00 calc(15 * 360deg / 17) calc(16 * 360deg / 17),
-    #FF6347 calc(16 * 360deg / 17) 360deg
-  );
- /* background: conic-gradient(
-    red 0deg calc(360deg / 17),
-    transparent calc(360deg / 17) 180deg,
-    red 180deg calc(540deg / 17),
-    transparent calc(540deg / 17) 360deg
-  );*/
-}
-
 .logo {
   font-family: Times New Roman;
+/*
   font-size: 70px;
+*/
+  font-size: 6.836vw;
   text-shadow: var(--shadow-lang);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  animation: slide-bck-center var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .language {
@@ -119,6 +90,7 @@ const configLang = ref([
   font-family: Times New Roman;
   text-shadow: var(--shadow-lang);
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
 .language:hover {
@@ -127,406 +99,176 @@ const configLang = ref([
 
 .arabic {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: arabic var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*
+  font-size: 28px;
+  top: calc(50% + 11px);
+  left: calc(50% + 212px);
+  */
+  font-size: 2.734vw;
+  top: calc(50% + 1.074vw);
+  left: calc(50% + 20.703vw);
 }
 
 .dansk {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: dansk var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 25px;
+  top: calc(50% - 94px);
+  left: calc(50% - 18px);*/
+  font-size: 2.441vw;
+  top: calc(50% - 9.18vw);
+  left: calc(50% - 1.758vw);
 }
 
 .english {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: english var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 40px;
+  top: calc(50% + 58px);
+  left: calc(50% + 79px);*/
+  font-size: 3.906vw;
+  top: calc(50% + 5.664vw);
+  left: calc(50% + 7.715vw);
 }
 
 .chinese {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: chinese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 30px;
+  top: calc(50% + 6px);
+  left: calc(50% - 209px);*/
+  font-size: 2.93vw;
+  top: calc(50% + 0.586vw);
+  left: calc(50% - 20.41vw)
 }
 
 
 .deutsch {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: deutsch var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  /*font-size: 22px;
+  top: calc(50% + 59px);
+  left: calc(50% - 116px);*/
+  font-size: 2.148vw;
+  top: calc(50% + 5.762vw);
+  left: calc(50% - 11.328vw);
 }
 
 .korean {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: korean var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 22px;
+  top: calc(50% - 53px);
+  left: calc(50% + 18px);*/
+  font-size: 2.148vw;
+  top: calc(50% - 5.176vw);
+  left: calc(50% + 1.758vw);
 }
 
 .italiano {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: italiano var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 25px;
+  top: calc(50% + 101px);
+  left: calc(50% - 169px);*/
+  font-size: 2.441vw;
+  top: calc(50% + 9.863vw);
+  left: calc(50% - 16.504vw);
+
 }
 
 .norsk {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: norsk var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 20px;
+  top: calc(50% - 34px);
+  left: calc(50% - 192px);*/
+  font-size: 1.953vw;
+  top: calc(50% - 3.32vw);
+  left: calc(50% - 18.75vw)
 }
 
 .russian {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: russian var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 26px;
+  top: calc(50% - 55px);
+  left: calc(50% + 108px);*/
+  font-size: 2.539vw;
+  top: calc(50% - 5.371vw);
+  left: calc(50% + 10.547vw)
 }
 
 .turkish {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: turkish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 28px;
+  top: calc(50% + 101px);
+  left: calc(50% + 16px);*/
+  font-size: 2.734vw;
+  top: calc(50% + 9.863vw);
+  left: calc(50% + 1.562vw);
 }
 
 .swedish {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: swedish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 20px;
+  top: calc(50% - 86px);
+  left: calc(50% + 168px);*/
+  font-size: 1.953vw;
+  top: calc(50% - 8.398vw);
+  left: calc(50% + 16.406vw);
 }
 
 .dutch {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: dutch var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 23px;
+  top: calc(50% + 100px);
+  left: calc(50% + 128px);*/
+  font-size: 2.246vw;
+  top: calc(50% + 9.766vw);
+  left: calc(50% + 12.5vw);
 }
 
 .spanish {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: spanish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 40px;
+  top: calc(50% - 56px);
+  left: calc(50% - 91px);*/
+  font-size: 3.906vw;
+  top: calc(50% - 5.469vw);
+  left: calc(50% - 8.887vw);
 }
 
 .suomi {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: suomi var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 20px;
+  top: calc(50% + 57px);
+  left: calc(50% + 176px);*/
+  font-size: 1.953vw;
+  top: calc(50% + 5.566vw);
+  left: calc(50% + 17.187vw);
 }
 
 .portuguese {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: portuguese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 32px;
+  top: calc(50% - 55px);
+  left: calc(50% + 229px);*/
+  font-size: 3.125vw;
+  top: calc(50% - 5.371vw);
+  left: calc(50% + 22.353vw);
 }
 
 .japanese {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: japanese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+/*  font-size: 22px;
+  top: calc(50% + 59px);
+  left: calc(50% - 31px);*/
+  font-size: 2.148vw;
+  top: calc(50% + 5.762vw);
+  left: calc(50% - 3.027vw);
 }
 
 .french {
   position: absolute;
-  transform: translate(-50%, -50%);
-  animation: french var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-}
-
-@keyframes slide-bck-center {
-  0% {
-    transform: translateZ(calc(var(--perspective) * -1)) translate(-50%, -50%);
-  }
-  100% {
-    transform: translateZ(0) translate(-50%, -50%);
-  }
-}
-
-@keyframes english {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 50%;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 250px);
-    left: 50%;*/
-
-    top: calc(50% - 250px);
-    left: calc(50% + 47px);
-  }
-}
-
-@keyframes turkish {
-  0% {
-    top: 110%;
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% + 300px);
-    left: calc(50% - 65px);
-    */
-
-    top: calc(50% + 225px);
-    left: calc(50% - 98px);
-  }
-}
-
-@keyframes swedish {
-  0% {
-    top: 110%;
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% + 300px);
-    left: calc(50% + 65px);
-    */
-
-    top: calc(50% + 245px);
-    left: calc(50% + 1px);
-  }
-}
-
-@keyframes arabic {
-  0% {
-    top: 50%;
-    left: 100%;
-  }
-  100% {
-/*
-    variant 1
-    top: 50%;
-    left: calc(50% + 365px);
-
-    */
-
-    top: calc(50% + 15px);
-    left: calc(50% + 251px);
-  }
-}
-
-@keyframes dansk {
-  0% {
-    top: 50%;
-    left: calc(0px - var(--lang-fz));
-  }
-  100% {
-/*
-    variant 1
-    top: 50%;
-    left: calc(50% - 365px)
-    */
-
-    top: calc(50% + -68px);
-    left: calc(50% - 242px);
-  }
-}
-
-@keyframes norsk {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 225px);
-    left: calc(50% - 158px);*/
-
-    top: calc(50% - 245px);
-    left: calc(50% - 47px);
-  }
-}
-
-@keyframes chinese {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 225px);
-    left: calc(50% + 158px);
-    */
-
-    top: calc(50% - 207px);
-    left: calc(50% + 138px);
-  }
-}
-
-@keyframes korean {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 150px);
-    left: calc(50% - 225px);*/
-
-    top: calc(50% - 209px);
-    left: calc(50% - 130px);
-  }
-}
-
-@keyframes italiano {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 150px);
-    left: calc(50% + 225px);
-    */
-
-    top: calc(50% - 147px);
-    left: calc(50% + 210px);
-  }
-}
-
-@keyframes russian {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 75px);
-    left: calc(50% - 310px);*/
-
-    top: calc(50% - 144px);
-    left: calc(50% - 213px);
-  }
-}
-
-@keyframes deutsch {
-  0% {
-    top: calc(0px - var(--lang-fz));
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% - 75px);
-    left: calc(50% + 310px);
-    */
-
-    top: calc(50% - 65px);
-    left: calc(50% + 242px);
-  }
-}
-
-@keyframes portuguese {
-  0% {
-    top: 110%;
-    left: 0;
-  }
-  100% {
-   /*
-    variant 1
-    top: calc(50% + 225px);
-    left: calc(50% - 158px);
-    */
-
-    top: calc(50% + 170px);
-    left: calc(50% - 174px);
-  }
-}
-
-@keyframes dutch {
-  0% {
-    top: 110%;
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% + 225px);
-    left: calc(50% + 158px);
-    */
-
-    top: calc(50% + 215px);
-    left: calc(50% + 111px);
-  }
-}
-
-@keyframes japanese {
-  0% {
-    top: 110%;
-    left: 0;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% + 150px);
-    left: calc(50% - 225px);
-    */
-
-    top: calc(50% + 100px);
-    left: calc(50% - 218px);
-  }
-}
-
-@keyframes spanish {
-  0% {
-    top: 110%;
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-   top: calc(50% + 150px);
-   left: calc(50% + 225px);
-   */
-
-    top: calc(50% + 163px);
-    left: calc(50% + 179px);
-  }
-}
-
-@keyframes french {
-  0% {
-    top: 110%;
-    left: 0;
-  }
-  100% {
-   /*
-    variant 1
-    top: calc(50% + 75px);
-    left: calc(50% - 310px);
-    */
-
-    top: calc(50% + 22px);
-    left: calc(50% - 247px);
-  }
-}
-
-@keyframes suomi {
-  0% {
-    top: 110%;
-    left: 100vw;
-  }
-  100% {
-/*
-    variant 1
-    top: calc(50% + 75px);
-    left: calc(50% + 310px);
-    */
-
-    top: calc(50% + 94px);
-    left: calc(50% + 223px);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    display: none;
-  }
+/*  font-size: 40px;
+  top: calc(50% + 58px);
+  left: calc(50% - 232px);*/
+  font-size: 3.906vw;
+  top: calc(50% + 5.664vw);
+  left: calc(50% - 22.656vw);
 }
 
 
