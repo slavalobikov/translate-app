@@ -212,22 +212,22 @@ const configLang = ref([
 
 @keyframes turkish {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 0;
   }
   100% {
-    bottom: 3vw;
+    top: 83%;
     left: calc(50vw - 6vw);
   }
 }
 
 @keyframes swedish {
   0% {
-    bottom: calc(0px - var(--lang-fz));
-    left: 100vw;
+    top: 110%;
+    left: 0;
   }
   100% {
-    bottom: 3vw;
+    top: 83%;
     left: calc(50vw + 6vw);
   }
 }
@@ -322,66 +322,66 @@ const configLang = ref([
 
 @keyframes portuguese {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 0;
   }
   100% {
-    bottom: 7.75vw;
+    top: 73%;
     left: 36.05vw;
   }
 }
 
 @keyframes dutch {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 100vw;
   }
   100% {
-    bottom: 7.75vw;
+    top: 73%;
     left: 63.95vw;
   }
 }
 
 @keyframes japanese {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 0;
   }
   100% {
-    bottom: 13.175vw;
+    top: 67%;
     left: 27.525vw;
   }
 }
 
 @keyframes spanish {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 100vw;
   }
   100% {
-    bottom: 13.175vw;
+    top: 67%;
     left: 72.475vw;
   }
 }
 
 @keyframes french {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 0;
   }
   100% {
-    bottom: 18.6vw;
+    top: 55%;
     left: 20.55vw;
   }
 }
 
 @keyframes suomi {
   0% {
-    bottom: calc(0px - var(--lang-fz));
+    top: 110%;
     left: 100vw;
   }
   100% {
-    bottom: 18.6vw;
+    top: 55%;
     left: 79.45vw;
   }
 }
