@@ -389,7 +389,7 @@ const configLang = ref([
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .wrapper {
     display: none;
   }
