@@ -105,7 +105,7 @@ const configLang = ref([
 
 .logo {
   font-family: Times New Roman;
-  font-size: 80px;
+  font-size: 70px;
   text-shadow: var(--shadow-lang);
   position: absolute;
   left: 50%;
