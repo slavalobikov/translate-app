@@ -42,7 +42,7 @@ const configLang = ref([
       <div class='language spanish'>español</div>
       <div class='language suomi'>suomi</div>
       <div class='language portuguese'>português</div>
-      <div class='language japanese'>Japanese</div>
+      <div class='language japanese'>japanese</div>
       <div class='language french'>français</div>
     </div>
   </div>
@@ -68,7 +68,7 @@ const configLang = ref([
 
 .logo {
   font-family: Times New Roman;
-  font-size: 4.85vw;
+  font-size: 50px;
   text-shadow: var(--shadow-lang);
   position: absolute;
   left: 50%;
@@ -90,103 +90,104 @@ const configLang = ref([
 
 .arabic {
   position: absolute;
-  transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
   animation: arabic var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .dansk {
   position: absolute;
-  transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
   animation: dansk var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .english {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: english var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .chinese {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: chinese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
-.italiano {
-  position: absolute;
-  transform: translate(-50%, 0);
-  animation: italiano var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-}
 
 .deutsch {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: deutsch var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .korean {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: korean var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.italiano {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: italiano var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .norsk {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: norsk var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .russian {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: russian var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .turkish {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: turkish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .swedish {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: swedish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .dutch {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: dutch var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .spanish {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: spanish var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .suomi {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: suomi var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .portuguese {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: portuguese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .japanese {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: japanese var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 .french {
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   animation: french var(--animation-language-time) cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
@@ -205,7 +206,7 @@ const configLang = ref([
     left: 50%;
   }
   100% {
-    top: 0;
+    top: calc(50% - 250px);
     left: 50%;
   }
 }
@@ -216,8 +217,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 83%;
-    left: calc(50vw - 6vw);
+    top: calc(50% + 300px);
+    left: calc(50% - 65px);
   }
 }
 
@@ -227,19 +228,19 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 83%;
-    left: calc(50vw + 6vw);
+    top: calc(50% + 300px);
+    left: calc(50% + 65px);
   }
 }
 
 @keyframes arabic {
   0% {
     top: 50%;
-    right: calc(0px - var(--lang-fz));
+    left: 100%;
   }
   100% {
     top: 50%;
-    right: 9.3vw;
+    left: calc(50% + 365px);
   }
 }
 
@@ -250,7 +251,7 @@ const configLang = ref([
   }
   100% {
     top: 50%;
-    left: 9.3vw;
+    left: calc(50% - 365px)
   }
 }
 
@@ -260,8 +261,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 4.65vw;
-    left: 37.135vw;
+    top: calc(50% - 225px);
+    left: calc(50% - 158px);
   }
 }
 
@@ -271,8 +272,8 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 4.65vw;
-    left: 62.865vw;
+    top: calc(50% - 225px);
+    left: calc(50% + 158px);
   }
 }
 
@@ -282,8 +283,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 10.85vw;
-    left: 29.85vw;
+    top: calc(50% - 150px);
+    left: calc(50% - 225px);
   }
 }
 
@@ -293,8 +294,8 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 10.85vw;
-    left: 70.15vw;
+    top: calc(50% - 150px);
+    left: calc(50% + 225px);
   }
 }
 
@@ -304,8 +305,10 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 17.05vw;
-    left: 22.1vw;
+/*    top: 17.05vw;
+    left: 22.1vw;*/
+    top: calc(50% - 75px);
+    left: calc(50% - 310px);
   }
 }
 
@@ -315,8 +318,8 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 17.05vw;
-    left: 77.9vw;
+    top: calc(50% - 75px);
+    left: calc(50% + 310px);
   }
 }
 
@@ -326,8 +329,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 73%;
-    left: 36.05vw;
+    top: calc(50% + 225px);
+    left: calc(50% - 158px);
   }
 }
 
@@ -337,8 +340,8 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 73%;
-    left: 63.95vw;
+    top: calc(50% + 225px);
+    left: calc(50% + 158px);
   }
 }
 
@@ -348,8 +351,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 67%;
-    left: 27.525vw;
+    top: calc(50% + 150px);
+    left: calc(50% - 225px);
   }
 }
 
@@ -359,8 +362,8 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 67%;
-    left: 72.475vw;
+    top: calc(50% + 150px);
+    left: calc(50% + 225px);
   }
 }
 
@@ -370,8 +373,8 @@ const configLang = ref([
     left: 0;
   }
   100% {
-    top: 55%;
-    left: 20.55vw;
+    top: calc(50% + 75px);
+    left: calc(50% - 310px);
   }
 }
 
@@ -381,8 +384,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: 55%;
-    left: 79.45vw;
+    top: calc(50% + 75px);
+    left: calc(50% + 310px);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    display: none;
   }
 }
 
