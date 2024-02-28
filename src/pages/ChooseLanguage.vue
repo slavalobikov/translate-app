@@ -27,7 +27,7 @@ const configLang = ref([
       <div class='logo'>
         <span class='green_logo'>Trans</span>lation
       </div>
-      <div class='circle' />
+<!--      <div class='circle' />-->
       <div class='language russian'>русский</div>
       <div class='language korean'>한국어</div>
       <div class='language arabic'>العربية</div>
@@ -76,6 +76,31 @@ const configLang = ref([
   width: 500px;
   border: red solid 3px;
   border-radius: 50%;
+  background: conic-gradient(
+    #FF0000 0deg calc(360deg / 17),
+    #FF4500 calc(360deg / 17) calc(2 * 360deg / 17),
+    #FFA500 calc(2 * 360deg / 17) calc(3 * 360deg / 17),
+    #FFD700 calc(3 * 360deg / 17) calc(4 * 360deg / 17),
+    #FFFF00 calc(4 * 360deg / 17) calc(5 * 360deg / 17),
+    #ADFF2F calc(5 * 360deg / 17) calc(6 * 360deg / 17),
+    #7FFF00 calc(6 * 360deg / 17) calc(7 * 360deg / 17),
+    #00FF00 calc(7 * 360deg / 17) calc(8 * 360deg / 17),
+    #00FA9A calc(8 * 360deg / 17) calc(9 * 360deg / 17),
+    #00CED1 calc(9 * 360deg / 17) calc(10 * 360deg / 17),
+    #4169E1 calc(10 * 360deg / 17) calc(11 * 360deg / 17),
+    #800080 calc(11 * 360deg / 17) calc(12 * 360deg / 17),
+    #9932CC calc(12 * 360deg / 17) calc(13 * 360deg / 17),
+    #8B4513 calc(13 * 360deg / 17) calc(14 * 360deg / 17),
+    #A0522D calc(14 * 360deg / 17) calc(15 * 360deg / 17),
+    #FF8C00 calc(15 * 360deg / 17) calc(16 * 360deg / 17),
+    #FF6347 calc(16 * 360deg / 17) 360deg
+  );
+ /* background: conic-gradient(
+    red 0deg calc(360deg / 17),
+    transparent calc(360deg / 17) 180deg,
+    red 180deg calc(540deg / 17),
+    transparent calc(540deg / 17) 360deg
+  );*/
 }
 
 .logo {
@@ -218,8 +243,13 @@ const configLang = ref([
     left: 50%;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 250px);
-    left: 50%;
+    left: 50%;*/
+
+    top: calc(50% - 250px);
+    left: calc(50% + 47px);
   }
 }
 
@@ -229,8 +259,14 @@ const configLang = ref([
     left: 0;
   }
   100% {
+/*
+    variant 1
     top: calc(50% + 300px);
     left: calc(50% - 65px);
+    */
+
+    top: calc(50% + 225px);
+    left: calc(50% - 98px);
   }
 }
 
@@ -240,8 +276,14 @@ const configLang = ref([
     left: 0;
   }
   100% {
+/*
+    variant 1
     top: calc(50% + 300px);
     left: calc(50% + 65px);
+    */
+
+    top: calc(50% + 245px);
+    left: calc(50% + 1px);
   }
 }
 
@@ -251,8 +293,15 @@ const configLang = ref([
     left: 100%;
   }
   100% {
+/*
+    variant 1
     top: 50%;
     left: calc(50% + 365px);
+
+    */
+
+    top: calc(50% + 15px);
+    left: calc(50% + 251px);
   }
 }
 
@@ -262,8 +311,14 @@ const configLang = ref([
     left: calc(0px - var(--lang-fz));
   }
   100% {
+/*
+    variant 1
     top: 50%;
     left: calc(50% - 365px)
+    */
+
+    top: calc(50% + -68px);
+    left: calc(50% - 242px);
   }
 }
 
@@ -273,8 +328,13 @@ const configLang = ref([
     left: 0;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 225px);
-    left: calc(50% - 158px);
+    left: calc(50% - 158px);*/
+
+    top: calc(50% - 245px);
+    left: calc(50% - 47px);
   }
 }
 
@@ -284,8 +344,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 225px);
     left: calc(50% + 158px);
+    */
+
+    top: calc(50% - 207px);
+    left: calc(50% + 138px);
   }
 }
 
@@ -295,8 +361,13 @@ const configLang = ref([
     left: 0;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 150px);
-    left: calc(50% - 225px);
+    left: calc(50% - 225px);*/
+
+    top: calc(50% - 209px);
+    left: calc(50% - 130px);
   }
 }
 
@@ -306,8 +377,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 150px);
     left: calc(50% + 225px);
+    */
+
+    top: calc(50% - 147px);
+    left: calc(50% + 210px);
   }
 }
 
@@ -317,10 +394,13 @@ const configLang = ref([
     left: 0;
   }
   100% {
-/*    top: 17.05vw;
-    left: 22.1vw;*/
+/*
+    variant 1
     top: calc(50% - 75px);
-    left: calc(50% - 310px);
+    left: calc(50% - 310px);*/
+
+    top: calc(50% - 144px);
+    left: calc(50% - 213px);
   }
 }
 
@@ -330,8 +410,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
+/*
+    variant 1
     top: calc(50% - 75px);
     left: calc(50% + 310px);
+    */
+
+    top: calc(50% - 65px);
+    left: calc(50% + 242px);
   }
 }
 
@@ -341,8 +427,14 @@ const configLang = ref([
     left: 0;
   }
   100% {
+   /*
+    variant 1
     top: calc(50% + 225px);
     left: calc(50% - 158px);
+    */
+
+    top: calc(50% + 170px);
+    left: calc(50% - 174px);
   }
 }
 
@@ -352,8 +444,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
+/*
+    variant 1
     top: calc(50% + 225px);
     left: calc(50% + 158px);
+    */
+
+    top: calc(50% + 215px);
+    left: calc(50% + 111px);
   }
 }
 
@@ -363,8 +461,14 @@ const configLang = ref([
     left: 0;
   }
   100% {
+/*
+    variant 1
     top: calc(50% + 150px);
     left: calc(50% - 225px);
+    */
+
+    top: calc(50% + 100px);
+    left: calc(50% - 218px);
   }
 }
 
@@ -374,8 +478,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
-    top: calc(50% + 150px);
-    left: calc(50% + 225px);
+/*
+    variant 1
+   top: calc(50% + 150px);
+   left: calc(50% + 225px);
+   */
+
+    top: calc(50% + 163px);
+    left: calc(50% + 179px);
   }
 }
 
@@ -385,8 +495,14 @@ const configLang = ref([
     left: 0;
   }
   100% {
+   /*
+    variant 1
     top: calc(50% + 75px);
     left: calc(50% - 310px);
+    */
+
+    top: calc(50% + 22px);
+    left: calc(50% - 247px);
   }
 }
 
@@ -396,8 +512,14 @@ const configLang = ref([
     left: 100vw;
   }
   100% {
+/*
+    variant 1
     top: calc(50% + 75px);
     left: calc(50% + 310px);
+    */
+
+    top: calc(50% + 94px);
+    left: calc(50% + 223px);
   }
 }
 
