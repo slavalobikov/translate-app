@@ -27,6 +27,7 @@ const configLang = ref([
       <div class='logo'>
         <span class='green_logo'>Trans</span>lation
       </div>
+      <div class='circle' />
       <div class='language russian'>русский</div>
       <div class='language korean'>한국어</div>
       <div class='language arabic'>العربية</div>
@@ -66,9 +67,20 @@ const configLang = ref([
   perspective: var(--perspective);
 }
 
+.circle {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  right: 50%;
+  height: 500px;
+  width: 500px;
+  border: red solid 3px;
+  border-radius: 50%;
+}
+
 .logo {
   font-family: Times New Roman;
-  font-size: 50px;
+  font-size: 80px;
   text-shadow: var(--shadow-lang);
   position: absolute;
   left: 50%;
