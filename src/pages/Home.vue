@@ -3,6 +3,7 @@ import TranslationGallery from './../components/TranslationGallery.vue'
 import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue'
 </script>
 <template>
+  <div class='wrapper-max-content'>
   <div class='wrapper-head'>
     <img class='head-img' src='./../assets/head_ru.gif' alt='head'>
   </div>
@@ -49,9 +50,16 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
       <TranslationTagLine />
     </strong>
   </div>
+  </div>
 </template>
 
 <style scoped>
+
+.wrapper-max-content {
+  margin: 0 auto;
+  max-width: var(--max-content-width);
+}
+
 .title {
   margin-top: 10px;
   margin-left: calc(var(--common-gorizontal-margin) * 2);

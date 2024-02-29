@@ -76,6 +76,7 @@ select {
     --gray: #5d5d5d;
 
     --common-gorizontal-margin: 20px;
+    --max-content-width: 1440px;
 
 
     --width-menu: calc(180px + var(--wrapper-content-padding) * 2 + var(--padding-mobile-menu) * 2)/*calc(100vw - 15%)*/;
