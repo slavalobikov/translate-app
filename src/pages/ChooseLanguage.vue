@@ -274,7 +274,7 @@ const configLang = ref([
   left: calc(50% - 22.656vw);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) /*and (orientation: portrait)*/ {
   .logo {
     font-size: 10.667vw;
     top: calc(50% - 9.067vw);
@@ -383,6 +383,73 @@ const configLang = ref([
     left: calc(50% + 26.133vw);
   }
 
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+/*  add styles for gorizontal orintation on phone*/
+  .chinese {
+    left: calc(50% - 22.41vw);
+  }
+
+  .arabic {
+    left: calc(50% + 22.703vw);
+  }
+
+  .norsk {
+    left: calc(50% - 20.75vw)
+  }
+
+  .spanish {
+    left: calc(50% - 10.887vw);
+  }
+
+  .russian {
+    left: calc(50% + 12.547vw)
+  }
+
+  .portuguese {
+    left: calc(50% + 26.353vw);
+  }
+
+  .dansk {
+    top: calc(50% - 11.18vw);
+    left: calc(50% - 2.758vw);
+  }
+
+  .swedish {
+    top: calc(50% - 9.398vw);
+    left: calc(50% + 17.406vw);
+  }
+
+  .french {
+    left: calc(50% - 24.656vw);
+  }
+
+  .deutsch {
+    left: calc(50% - 12.328vw);
+  }
+
+  .english {
+    left: calc(50% + 9.715vw);
+  }
+
+  .suomi {
+    left: calc(50% + 20.187vw);
+  }
+
+  .italiano {
+    top: calc(50% + 10.863vw);
+    left: calc(50% - 17.504vw);
+  }
+
+  .turkish {
+    top: calc(50% + 10.863vw);
+  }
+
+  .dutch {
+    top: calc(50% + 10.863vw);
+    left: calc(50% + 13.8vw);
+  }
 }
 
 
