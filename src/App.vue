@@ -3,16 +3,12 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue'
 import { provide } from 'vue';
 
-
 provide('balance', '$12.00 (€11.21)');
 </script>
 
 <template>
   <Header />
-<!--  <div class='wrapper-head'>
-    <img class='head-img' src='./assets/head_ru.gif' alt='head'>
-  </div>-->
-  <router-view></router-view>
+    <router-view></router-view>
   <Footer />
 </template>
 

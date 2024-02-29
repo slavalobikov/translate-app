@@ -61,8 +61,7 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
 }
 
 .title {
-  margin-top: 10px;
-  margin-left: calc(var(--common-gorizontal-margin) * 2);
+  margin: 10px calc(var(--common-gorizontal-margin) * 2) 0 calc(var(--common-gorizontal-margin) * 2);
   font-size: 14px;
   font-weight: 400;
   color: var(--black)
@@ -101,19 +100,26 @@ strong {
 
 .wrapper-head {
   margin: 20px var(--common-gorizontal-margin) 0 var(--common-gorizontal-margin);
-  display: none;
   padding: var(--wrapper-content-padding);
   border: var(--wrapper-content-border);
   background-color: var(--wrapper-content-background);
+  background: var(--body-backround);
+  display: flex;
+  justify-content: center;
 }
 
 .head-img {
+  max-width: 500px;
   width: 100%;
 }
 
 @media screen and (max-width: 480px) {
   .wrapper-head {
     display: block;
+  }
+
+  .head-img {
+    width: 100%;
   }
 }
 </style>

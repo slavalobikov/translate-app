@@ -78,7 +78,7 @@ select {
     --common-gorizontal-margin: 20px;
     --max-content-width: 1440px;
 
-
+    --height-header: 50px;
     --width-menu: calc(180px + var(--wrapper-content-padding) * 2 + var(--padding-mobile-menu) * 2)/*calc(100vw - 15%)*/;
     --padding-mobile-menu: 10px;
     --transition-click: 0.3s;
@@ -108,4 +108,8 @@ select {
 body {
     font-family: Tahoma,Verdana,Arial;
     background-color: var(--body-backround);
+}
+
+#app {
+    overflow-x: hidden;
 }

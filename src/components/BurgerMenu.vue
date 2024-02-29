@@ -2,7 +2,7 @@
   <div class='wrapper'>
     <teleport to='body'>
       <transition name='fade'>
-        <div :class="{'menu-open': isOpen,'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}"
+        <div :class="{'menu-close' : !isOpen, 'even-open-modal': !isEvenOpen}"
              class='menu'>
           <div ref='swipeElement' class='overflow'>
             <div class='cross-block' />

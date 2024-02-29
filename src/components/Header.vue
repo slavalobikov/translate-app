@@ -1,15 +1,19 @@
 <script setup>
 import BurgerMenu from './BurgerMenu.vue'
 import IconMail from './icons/IconMail.vue'
-import { inject, ref } from 'vue'
+import IconUser from './icons/IconUser.vue'
+import { inject, ref, onMounted, onUnmounted } from 'vue'
 import router from '../routes/router'
 import { PATHS } from '../constants/PATHS'
-
 const balance = inject('balance', '$00.00 (€00.00)');
 
-
+const userMenuRef = ref(null);
+const userBtnRef = ref(null);
 const isOpen = ref(false);
 const isEvenOpen = ref(false);
+
+const isOpenMenuUser = ref(false);
+const isEvenMenuUser = ref(false)
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
@@ -19,6 +23,34 @@ const toggleMenu = () => {
 const clickMessage = () => {
   router.push(PATHS.MAILBOX_INBOX)
 }
+
+const clickUserMenu = () => {
+  isOpenMenuUser.value = !isOpenMenuUser.value
+  isEvenMenuUser.value = true
+}
+
+/*const handleDocumentClick = (event) => {
+
+  const userMenu = userMenuRef?.value;
+  const userBtn = userBtnRef?.value;
+
+  if (userMenu &&
+    userBtn &&
+    (!userMenu?.contains(event.target) ||
+    !userBtn?.contains(event.target))) {
+      clickUserMenu();
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleDocumentClick);
+});
+
+// Removing click event listener on component unmount
+onUnmounted(() => {
+  document.removeEventListener('click', handleDocumentClick);
+});*/
+
 </script>
 
 
@@ -33,6 +65,15 @@ const clickMessage = () => {
           9+
         </div>
       </button>
+      <button ref="userBtnRef" @click="clickUserMenu" class='user-btn'><IconUser /></button>
+      <div
+        ref="userMenuRef"
+        class='user-menu' :class="{'user-menu-open' : isOpenMenuUser, 'user-menu-close': !isOpenMenuUser, 'user-menu-first': !isEvenMenuUser}" >
+        <button>Войти</button>
+        <br />
+        <br />
+        <button>Регистрация</button>
+      </div>
     </h1>
   </header>
   <button @click="toggleMenu" :class="{ 'open': isOpen }" class="burger-button">
@@ -48,6 +89,7 @@ const clickMessage = () => {
   header {
     position: sticky;
     top: 0;
+    height: var(--height-header);
   }
 
   .h1 {
@@ -70,10 +112,10 @@ const clickMessage = () => {
     cursor: pointer;
     background: none;
     border: none;
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    display: none;
   }
 
   .burger-button span {
@@ -141,5 +183,77 @@ const clickMessage = () => {
   .balance:active {
     color: #00bd00;
   }
+
+  .user-btn {
+    margin: 0 10px;
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+
+  .user-btn:active {
+    transition: transform var(--transition-click);
+    transform: scale(1.15);
+  }
+
+  .user-menu {
+    position: absolute;
+    border: var(--wrapper-content-border);
+    top: calc(var(--height-header) + 10px);
+    background: var(--wrapper-content-background);
+    right: 10px;
+    padding: 15px;
+  }
+
+  .user-menu button {
+    width: 100%;
+  }
+
+  .user-menu-open {
+    animation: enter-user-menu var(--transition-click) ease-in-out forwards;
+  }
+
+  .user-menu-close {
+    animation: close-user-menu var(--transition-click) ease-in-out forwards;
+  }
+
+  .user-menu-first {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .burger-button {
+      display: flex;
+    }
+
+    .user-btn {
+      display: none;
+    }
+  }
+
+
+  @keyframes enter-user-menu {
+    0% {
+      right: 0;
+      transform: translate(100%, 0);
+    }
+    100% {
+      right: 10px;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes close-user-menu {
+    0% {
+      right: 10px;
+      transform: translate(0, 0);
+    }
+    100% {
+      right: 0;
+      transform: translate(100%, 0);
+    }
+  }
+
 
 </style>

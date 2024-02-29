@@ -24,8 +24,8 @@ const routes = [
   { path: PATHS.FAQ, component: <div>faq</div> },
   { path: PATHS.JOB, component: <div>job</div> },
   { path: PATHS.CONTACT, component: <div>contact</div> },
-  { path: PATHS.TERMS_OF_USE, component: TermsOfUse},
-  {path: PATHS.CHOOSE_LANG, component: ChooseLanguage}
+  { path: PATHS.TERMS_OF_USE, component: TermsOfUse },
+  { path: PATHS.CHOOSE_LANG, component: ChooseLanguage },
 ]
 
 const router = createRouter({
