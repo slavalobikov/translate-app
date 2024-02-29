@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import {PATHS} from '../constants/PATHS'
 
 const configLang = ref([
   { id: 0, lang: 'english' },
@@ -28,23 +29,23 @@ const configLang = ref([
         <span class='green_logo'>Trans</span>lation
       </div>
       <!--      <div class='circle' />-->
-      <div class='language russian'>русский</div>
-      <div class='language korean'>한국어</div>
-      <div class='language arabic'>العربية</div>
-      <div class='language dansk'>dansk</div>
-      <div class='language english'>english</div>
-      <div class='language chinese'>中文</div>
-      <div class='language italiano'>italiano</div>
-      <div class='language deutsch'>deutsch</div>
-      <div class='language norsk'>norsk</div>
-      <div class='language turkish'>türkçe</div>
-      <div class='language swedish'>svenska</div>
-      <div class='language dutch'>nederlands</div>
-      <div class='language spanish'>español</div>
-      <div class='language suomi'>suomi</div>
-      <div class='language portuguese'>português</div>
-      <div class='language japanese'>日本語</div>
-      <div class='language french'>français</div>
+      <router-link :to='PATHS.HOME' class='language russian'>русский</router-link>
+      <router-link :to='PATHS.HOME' class='language korean'>한국어</router-link>
+      <router-link :to='PATHS.HOME' class='language arabic'>العربية</router-link>
+      <router-link :to='PATHS.HOME' class='language dansk'>dansk</router-link>
+      <router-link :to='PATHS.HOME' class='language english'>english</router-link>
+      <router-link :to='PATHS.HOME' class='language chinese'>中文</router-link>
+      <router-link :to='PATHS.HOME' class='language italiano'>italiano</router-link>
+      <router-link :to='PATHS.HOME' class='language deutsch'>deutsch</router-link>
+      <router-link :to='PATHS.HOME' class='language norsk'>norsk</router-link>
+      <router-link :to='PATHS.HOME' class='language turkish'>türkçe</router-link>
+      <router-link :to='PATHS.HOME' class='language swedish'>svenska</router-link>
+      <router-link :to='PATHS.HOME' class='language dutch'>nederlands</router-link>
+      <router-link :to='PATHS.HOME' class='language spanish'>español</router-link>
+      <router-link :to='PATHS.HOME' class='language suomi'>suomi</router-link>
+      <router-link :to='PATHS.HOME' class='language portuguese'>português</router-link>
+      <router-link :to='PATHS.HOME' class='language japanese'>日本語</router-link>
+      <router-link :to='PATHS.HOME' class='language french'>français</router-link>
     </div>
   </div>
 </template>
@@ -87,6 +88,8 @@ const configLang = ref([
 
 .language {
   font-size: var(--lang-fz);
+  text-decoration: none;
+  color: var(--black);
   font-family: Times New Roman;
   text-shadow: var(--shadow-lang);
   cursor: pointer;
