@@ -7,7 +7,7 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
   <div class='wrapper-head'>
     <img class='head-img' src='./../assets/head_ru.gif' alt='head'>
   </div>
-  <h3 class='title'>Translation.Gallery - Многоязычная почтовая служба</h3>
+  <h3 class='title'>Translation.Gallery это:</h3>
   <div class='wrapper-content'>
     <p>
       <TranslationGallery />

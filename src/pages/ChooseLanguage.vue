@@ -75,9 +75,6 @@ const configLang = ref([
 
 .logo {
   font-family: Times New Roman;
-/*
-  font-size: 70px;
-*/
   font-size: 6.836vw;
   text-shadow: var(--shadow-lang);
   position: absolute;
@@ -102,11 +99,6 @@ const configLang = ref([
 
 .arabic {
   position: absolute;
-/*
-  font-size: 28px;
-  top: calc(50% + 11px);
-  left: calc(50% + 212px);
-  */
   font-size: 2.734vw;
   top: calc(50% + 1.074vw);
   left: calc(50% + 20.703vw);
@@ -114,9 +106,6 @@ const configLang = ref([
 
 .dansk {
   position: absolute;
-/*  font-size: 25px;
-  top: calc(50% - 94px);
-  left: calc(50% - 18px);*/
   font-size: 2.441vw;
   top: calc(50% - 9.18vw);
   left: calc(50% - 1.758vw);
@@ -124,9 +113,6 @@ const configLang = ref([
 
 .english {
   position: absolute;
-/*  font-size: 40px;
-  top: calc(50% + 58px);
-  left: calc(50% + 79px);*/
   font-size: 3.906vw;
   top: calc(50% + 5.664vw);
   left: calc(50% + 7.715vw);
@@ -134,9 +120,6 @@ const configLang = ref([
 
 .chinese {
   position: absolute;
-/*  font-size: 30px;
-  top: calc(50% + 6px);
-  left: calc(50% - 209px);*/
   font-size: 2.93vw;
   top: calc(50% + 0.586vw);
   left: calc(50% - 20.41vw)
@@ -145,9 +128,6 @@ const configLang = ref([
 
 .deutsch {
   position: absolute;
-  /*font-size: 22px;
-  top: calc(50% + 59px);
-  left: calc(50% - 116px);*/
   font-size: 2.148vw;
   top: calc(50% + 5.762vw);
   left: calc(50% - 11.328vw);
@@ -155,9 +135,6 @@ const configLang = ref([
 
 .korean {
   position: absolute;
-/*  font-size: 22px;
-  top: calc(50% - 53px);
-  left: calc(50% + 18px);*/
   font-size: 2.148vw;
   top: calc(50% - 5.176vw);
   left: calc(50% + 1.758vw);
@@ -165,9 +142,6 @@ const configLang = ref([
 
 .italiano {
   position: absolute;
-/*  font-size: 25px;
-  top: calc(50% + 101px);
-  left: calc(50% - 169px);*/
   font-size: 2.441vw;
   top: calc(50% + 9.863vw);
   left: calc(50% - 16.504vw);
@@ -176,9 +150,6 @@ const configLang = ref([
 
 .norsk {
   position: absolute;
-/*  font-size: 20px;
-  top: calc(50% - 34px);
-  left: calc(50% - 192px);*/
   font-size: 1.953vw;
   top: calc(50% - 3.32vw);
   left: calc(50% - 18.75vw)
@@ -186,9 +157,6 @@ const configLang = ref([
 
 .russian {
   position: absolute;
-/*  font-size: 26px;
-  top: calc(50% - 55px);
-  left: calc(50% + 108px);*/
   font-size: 2.539vw;
   top: calc(50% - 5.371vw);
   left: calc(50% + 10.547vw)
@@ -196,9 +164,6 @@ const configLang = ref([
 
 .turkish {
   position: absolute;
-/*  font-size: 28px;
-  top: calc(50% + 101px);
-  left: calc(50% + 16px);*/
   font-size: 2.734vw;
   top: calc(50% + 9.863vw);
   left: calc(50% + 1.562vw);
@@ -206,9 +171,6 @@ const configLang = ref([
 
 .swedish {
   position: absolute;
-/*  font-size: 20px;
-  top: calc(50% - 86px);
-  left: calc(50% + 168px);*/
   font-size: 1.953vw;
   top: calc(50% - 8.398vw);
   left: calc(50% + 16.406vw);
@@ -216,9 +178,6 @@ const configLang = ref([
 
 .dutch {
   position: absolute;
-/*  font-size: 23px;
-  top: calc(50% + 100px);
-  left: calc(50% + 128px);*/
   font-size: 2.246vw;
   top: calc(50% + 9.766vw);
   left: calc(50% + 12.5vw);
@@ -226,9 +185,6 @@ const configLang = ref([
 
 .spanish {
   position: absolute;
-/*  font-size: 40px;
-  top: calc(50% - 56px);
-  left: calc(50% - 91px);*/
   font-size: 3.906vw;
   top: calc(50% - 5.469vw);
   left: calc(50% - 8.887vw);
@@ -236,9 +192,6 @@ const configLang = ref([
 
 .suomi {
   position: absolute;
-/*  font-size: 20px;
-  top: calc(50% + 57px);
-  left: calc(50% + 176px);*/
   font-size: 1.953vw;
   top: calc(50% + 5.566vw);
   left: calc(50% + 17.187vw);
@@ -246,9 +199,6 @@ const configLang = ref([
 
 .portuguese {
   position: absolute;
-/*  font-size: 32px;
-  top: calc(50% - 55px);
-  left: calc(50% + 229px);*/
   font-size: 3.125vw;
   top: calc(50% - 5.371vw);
   left: calc(50% + 22.353vw);
@@ -256,9 +206,6 @@ const configLang = ref([
 
 .japanese {
   position: absolute;
-/*  font-size: 22px;
-  top: calc(50% + 59px);
-  left: calc(50% - 31px);*/
   font-size: 2.148vw;
   top: calc(50% + 5.762vw);
   left: calc(50% - 3.027vw);
@@ -266,9 +213,6 @@ const configLang = ref([
 
 .french {
   position: absolute;
-/*  font-size: 40px;
-  top: calc(50% + 58px);
-  left: calc(50% - 232px);*/
   font-size: 3.906vw;
   top: calc(50% + 5.664vw);
   left: calc(50% - 22.656vw);

@@ -1,9 +1,15 @@
 <script setup>
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue'
-import { provide } from 'vue';
+import { COUNTRYS } from './constants/COUNTRYS.JS'
+import { provide, ref } from 'vue';
+
+const isAuth = ref(false);
+const currentLang = ref(null);
 
 provide('balance', '$12.00 (€11.21)');
+provide('currentLang', COUNTRYS.JAPANESE);
+provide('isAuth', isAuth);
 </script>
 
 <template>

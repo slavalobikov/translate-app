@@ -3,7 +3,11 @@ import { PATHS } from '../constants/PATHS'
 </script>
 <template>
   <footer>
-    <router-link class='link-to-terms' :to='PATHS.TERMS_OF_USE'>Terms of use</router-link>
+    <div class='test'>
+      <router-link class='link-to-terms' :to='PATHS.TERMS_OF_USE'>Terms of use</router-link>
+
+      <div class='text-logo label-c'>© 2018 Translation.Gallery</div>
+    </div>
 <!--    <ul>
       <li>
         <router-link class='link' :to='PATHS.ABOUT'>О <span class='text-logo'>Translation.Gallery</span></router-link>
@@ -35,19 +39,23 @@ import { PATHS } from '../constants/PATHS'
       <img class='visa' src='./../assets/visa.png' alt='visa'>
       <img class='pcicompliant' src='./../assets/pci.svg' alt='pcicompliant'>
     </div>
-    <div class='text-logo label-c'>© 2018 Translation.Gallery</div>
   </footer>
 </template>
 
 <style scoped>
 footer {
-  margin: var(--common-gorizontal-margin);
+  margin: 10px var(--common-gorizontal-margin);
   font-size: 13px;
-
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap:18px;
   align-items: center;
+}
+
+.test {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .link {
@@ -76,8 +84,8 @@ ul li {
 }
 
 .label-c {
-  text-align: center;
-  margin-top: 10px;
+ /* text-align: center;
+  margin-top: 10px;*/
 }
 
 .images {
@@ -89,20 +97,23 @@ ul li {
 }
 
 .mastercard {
-  width: 50px;
+  width: 30px;
 }
 
 .visa {
-  width: 50px;
+  width: 30px;
 }
 
 .pcicompliant {
-  width: 50px;
+  width: 30px;
 }
 
 .link-to-terms {
+/*
   margin: 0 auto;
+*/
   color: var(--gray);
   text-decoration: none;
+  font-size: 14px;
 }
 </style>
