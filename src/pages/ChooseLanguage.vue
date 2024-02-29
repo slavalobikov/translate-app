@@ -282,7 +282,7 @@ const configLang = ref([
   }
 
   .english {
-    font-size: 8.8vw;
+    font-size: 8.4vw;
     top: calc(50% - 32.267vw);
     left: calc(50% + 20vw);
   }
@@ -360,7 +360,7 @@ const configLang = ref([
   }
 
   .spanish {
-    font-size: 8.8vw;
+    font-size: 8.4vw;
     top: calc(50% + 16.8vw);
     left: calc(50% - 19.2vw);
   }
@@ -378,7 +378,7 @@ const configLang = ref([
   }
 
   .french {
-    font-size: 9.6vw;
+    font-size: 8.4vw;
     top: calc(50% + 3.2vw);
     left: calc(50% + 26.133vw);
   }
