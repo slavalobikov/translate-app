@@ -271,6 +271,117 @@ const configLang = ref([
   left: calc(50% - 22.656vw);
 }
 
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 10.667vw;
+    top: calc(50% - 9.067vw);
+    left: 50%;
+  }
+
+  .english {
+    font-size: 8.8vw;
+    top: calc(50% - 32.267vw);
+    left: calc(50% + 20vw);
+  }
+
+  .suomi {
+    font-size: 5.333vw;
+    top: calc(50% + 16.267vw);
+    left: calc(50% + 7.467vw);
+  }
+
+  .arabic {
+    font-size: 5.867vw;
+    top: calc(50% - 20vw);
+    left: calc(50% + 35.467vw);
+  }
+
+  .dansk {
+    font-size: 5.6vw;
+    top: calc(50% + 31.733vw);
+    left: calc(50% - 32.533vw);
+  }
+
+  .chinese {
+    font-size: 6.113vw;
+    top: calc(50% + 4.8vw);
+    left: calc(50% - 32.8vw);
+  }
+
+  .deutsch {
+    font-size: 5.867vw;
+    top: calc(50% - 22.4vw);
+    left: calc(50% - 33.067vw);
+  }
+
+  .korean {
+    font-size: 4.8vw;
+    top: calc(50% + 16.533vw);
+    left: calc(50% + 29.067vw);
+  }
+
+  .italiano {
+    font-size: 4.8vw;
+    top: calc(50% + 27.2vw);
+    left: calc(50% + 18.933vw);
+  }
+
+  .norsk {
+    font-size: 5.6vw;
+    top: calc(50% + 31.733vw);
+    left: calc(50% - 5.333vw);
+  }
+
+  .russian {
+    font-size: 5.6vw;
+    top: calc(50% - 45.067vw);
+    left: 50%;
+  }
+
+  .turkish {
+    font-size: 5.6vw;
+    top: calc(50% - 44.267vw);
+    left: calc(50% + 31.2vw);
+  }
+
+  .swedish {
+    font-size: 5.333vw;
+    top: calc(50% + 40.8vw);
+    left: calc(50% - 17.6vw);
+  }
+
+  .dutch {
+    font-size: 5.333vw;
+    top: calc(50% - 56.267vw);
+    left: calc(50% + 17.6vw);
+  }
+
+  .spanish {
+    font-size: 8.8vw;
+    top: calc(50% + 16.8vw);
+    left: calc(50% - 19.2vw);
+  }
+
+  .portuguese {
+    font-size: 5.6vw;
+    top: calc(50% - 32.267vw);
+    left: calc(50% - 14.933vw);
+  }
+
+  .japanese {
+    font-size: 4.533vw;
+    top: calc(50% - 44.8vw);
+    left: calc(50% - 30.4vw);
+  }
+
+  .french {
+    font-size: 9.6vw;
+    top: calc(50% + 3.2vw);
+    left: calc(50% + 26.133vw);
+  }
+
+}
+
 
 
 
