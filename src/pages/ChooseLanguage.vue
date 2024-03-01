@@ -218,7 +218,7 @@ const configLang = ref([
   left: calc(50% - 22.656vw);
 }
 
-@media screen and (max-width: 480px) /*and (orientation: portrait)*/ {
+@media screen and (max-width: 768px) /*and (orientation: portrait)*/ {
   .logo {
     font-size: 10.667vw;
     top: calc(50% - 9.067vw);
