@@ -1,5 +1,6 @@
 <script setup>
 import { PATHS } from '../constants/PATHS'
+import PayPal from './icons/IconPayPal.vue';
 </script>
 <template>
   <footer>
@@ -35,8 +36,9 @@ import { PATHS } from '../constants/PATHS'
       </li>
     </ul>-->
     <div class='images'>
-      <img class='mastercard' src='./../assets/mastercard.png' alt='mastercard'>
+      <img class='paypal' src='./../assets/paypal.png' alt='paypal'>
       <img class='visa' src='./../assets/visa.png' alt='visa'>
+      <img class='mastercard' src='./../assets/mastercard.png' alt='mastercard'>
       <img class='pcicompliant' src='./../assets/pci.svg' alt='pcicompliant'>
     </div>
   </footer>
@@ -69,7 +71,7 @@ footer {
 }
 
 .text-logo {
-  font-family: Tahoma, Verdana, Arial;
+  font-size: 14px;
   color: var(--black);
 }
 
@@ -98,15 +100,19 @@ ul li {
 }
 
 .mastercard {
-  width: 30px;
+  width: 22px;
 }
 
 .visa {
-  width: 30px;
+  width: 32px;
+}
+
+.paypal {
+  width: 41px;
 }
 
 .pcicompliant {
-  width: 30px;
+  width: 26px;
 }
 
 .link-to-terms {
