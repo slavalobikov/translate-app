@@ -53,7 +53,6 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener('click', handleDocumentClick);
 });*/
-console.log('isAuth', isAuth.value)
 </script>
 
 
@@ -94,8 +93,10 @@ console.log('isAuth', isAuth.value)
 <style scoped>
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   height: var(--height-header);
 }
 

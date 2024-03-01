@@ -3,17 +3,24 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue'
 import { COUNTRYS } from './constants/COUNTRYS.JS'
 import { provide, ref } from 'vue';
+import { LANGUAGES } from './constants/LANGUAGES.JS'
 
 const isAuth = ref(false);
-const currentLang = ref(null);
+const currentLang = ref(COUNTRYS.JAPANESE);
+
+
+const changeCurrentLang = (lang) => {
+  currentLang.value = lang
+}
 
 provide('balance', '$12.00 (€11.21)');
-provide('currentLang', COUNTRYS.JAPANESE);
+provide('currentLang', currentLang);
+provide('changeCurrentLang', changeCurrentLang);
 provide('isAuth', isAuth);
 </script>
 
 <template>
-  <Header />
+    <Header />
     <router-view></router-view>
   <Footer />
 </template>

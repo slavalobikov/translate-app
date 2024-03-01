@@ -56,7 +56,7 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
 <style scoped>
 
 .wrapper-max-content {
-  margin: 0 auto;
+  margin: calc(var(--height-header) + 15px) auto 0 auto;
   max-width: var(--max-content-width);
 }
 

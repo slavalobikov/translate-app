@@ -103,9 +103,16 @@ select {
 
     --shadow-lang: -3px 3px 3px rgba(0, 0, 0, .2);
     --lang-fz: 28px;
+
+    --flag-width: 27px;
+    --flag-height: 27px;
 }
 
 body {
     font-family: Tahoma,Verdana,Arial;
     background-color: var(--body-backround);
+}
+
+#app {
+    overflow-x: hidden;
 }
