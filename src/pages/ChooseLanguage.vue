@@ -28,6 +28,7 @@ const configLang = ref([
       <div class='logo'>
         <span class='green_logo'>Trans</span>lation
       </div>
+
       <!--      <div class='circle' />-->
       <router-link :to='PATHS.HOME' class='language russian'>русский</router-link>
       <router-link :to='PATHS.HOME' class='language korean'>한국어</router-link>
