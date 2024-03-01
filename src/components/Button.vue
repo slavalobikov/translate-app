@@ -1,5 +1,7 @@
 <template>
-  <button class='btn'>Выход</button>
+  <button class='btn'>
+    <slot></slot>
+  </button>
 
 </template>
 
