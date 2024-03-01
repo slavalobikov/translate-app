@@ -108,12 +108,14 @@ header {
 }
 
 .auth-menu-mobile {
+  color: var(--gray);
   position: absolute;
   left: 20px;
   display: flex;
 }
 
 .auth-menu-mobile button {
+  color: var(--gray);
   border: none;
 }
 
