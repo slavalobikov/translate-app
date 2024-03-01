@@ -15,13 +15,20 @@
 </template>
 
 <style scoped>
-
   .auth-page {
-    min-width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     border: solid red 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 50px;
   }
 </style>
