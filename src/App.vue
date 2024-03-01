@@ -29,7 +29,7 @@ provide('isAuth', isAuth);
 
 <style scoped>
   .app {
-    min-height: 100lvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
   }
