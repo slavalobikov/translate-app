@@ -106,6 +106,7 @@ header {
   left: 0;
   right: 0;
   height: var(--height-header);
+  z-index: 100;
 }
 
 .auth-menu-mobile {
