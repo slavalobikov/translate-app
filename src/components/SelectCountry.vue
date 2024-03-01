@@ -72,24 +72,6 @@ const configLang =
       <div v-if='lang && item.country === lang'>{{ item.lang }}</div>
       <img v-if='lang && item.country === lang' class='flag' :src='item.src' :alt='item.country'>
     </div>
-
-    <!--    <img v-if='lang === COUNTRYS.ENGLISH' class='flag' src='./../assets/countrys/uk.png' :alt='COUNTRYS.ENGLISH'>
-        <img v-if='lang === COUNTRYS.RUSSIAN' class='flag' src='./../assets/countrys/ru.png' :alt='COUNTRYS.RUSSIAN'>
-        <img v-if='lang === COUNTRYS.KOREAN' class='flag' src='./../assets/countrys/korean.png' :alt='COUNTRYS.KOREAN'>
-        <img v-if='lang === COUNTRYS.ARABIC' class='flag' src='./../assets/countrys/arabic.png' :alt='COUNTRYS.ARABIC'>
-        <img v-if='lang === COUNTRYS.DANSK' class='flag' src='./../assets/countrys/dansk.png' :alt='COUNTRYS.DANSK'>
-        <img v-if='lang === COUNTRYS.CHINESE' class='flag' src='./../assets/countrys/chinese.png' :alt='COUNTRYS.CHINESE'>
-        <img v-if='lang === COUNTRYS.ITALIANO' class='flag' src='./../assets/countrys/italiano.webp' :alt='COUNTRYS.ITALIANO'>
-        <img v-if='lang === COUNTRYS.DEUTSCH' class='flag' src='./../assets/countrys/deutsch.png' :alt='COUNTRYS.DEUTSCH'>
-        <img v-if='lang === COUNTRYS.NORSK' class='flag' src='./../assets/countrys/norsk.png' :alt='COUNTRYS.NORSK'>
-        <img v-if='lang === COUNTRYS.TURKISH' class='flag' src='./../assets/countrys/turkish.png' :alt='COUNTRYS.TURKISH'>
-        <img v-if='lang === COUNTRYS.DUTCH' class='flag' src='./../assets/countrys/dutch.png' :alt='COUNTRYS.DUTCH'>
-        <img v-if='lang === COUNTRYS.SPANISH' class='flag' src='./../assets/countrys/spanish.webp' :alt='COUNTRYS.SPANISH'>
-        <img v-if='lang === COUNTRYS.SUOMI' class='flag' src='./../assets/countrys/suomi.png' :alt='COUNTRYS.SUOMI'>
-        <img v-if='lang === COUNTRYS.PORTUGUESE' class='flag' src='./../assets/countrys/portuguese.webp' :alt='COUNTRYS.PORTUGUESE'>
-        <img v-if='lang === COUNTRYS.JAPANESE' class='flag' src='./../assets/countrys/japanese.png' :alt='COUNTRYS.JAPANESE'>
-        <img v-if='lang === COUNTRYS.FRENCH' class='flag' src='./../assets/countrys/french.webp' :alt='COUNTRYS.FRENCH'>
-        <img v-if='lang === COUNTRYS.SWEDISH' class='flag' src='./../assets/countrys/swedish.png' :alt='COUNTRYS.SWEDISH'>-->
   </button>
   <div :class="{'close-lang-menu': !isOpenLangMenu, 'even-lang-menu': !isEvenLangMenu}" class='lang-list'>
     <button @click='changeLang(item.country)' v-for='item in configLang' class='lang-list-wrapper'>
@@ -137,7 +119,7 @@ const configLang =
     border: var(--wrapper-content-border);
     padding: 10px;
     right: -300px;
-    animation: slide-from-right var(--transition-click) forwards;
+    animation: slide-from-right var(--transition-click) both;
   }
 
   .current-country-wrapper {
@@ -185,7 +167,7 @@ const configLang =
   }
 
   .close-lang-menu {
-    animation: slide-in-right  var(--transition-click) forwards;
+    animation: slide-in-right  var(--transition-click) both;
   }
 
   .even-lang-menu {
@@ -200,19 +182,24 @@ const configLang =
 
   @keyframes slide-from-right {
     0% {
-      right: -290px;
+      transform: translate(100%, 0);
+      right: 0;
+
     }
     100% {
       right: 10px;
+      transform: translate(0, 0);
     }
   }
 
   @keyframes slide-in-right {
     0% {
       right: 10px;
+      transform: translate(0, 0);
     }
     100% {
-      right: -290px;
+      transform: translate(100%, 0);
+      right: 0;
     }
   }
 
