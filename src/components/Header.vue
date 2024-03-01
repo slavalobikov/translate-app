@@ -150,7 +150,7 @@ header {
   position: fixed;
   left: 10px;
   top: 0;
-  z-index: 3;
+  z-index: 101;
   cursor: pointer;
   background: none;
   border: none;

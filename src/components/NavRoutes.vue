@@ -47,7 +47,9 @@ const balance = inject('balance', '$00.00 (€00.00)');
     </div>
 
     <div class='wrapper-content'>
-      <Button />
+      <Button >
+        Выход
+      </Button>
     </div>
   </div>
 </template>

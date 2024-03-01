@@ -219,7 +219,170 @@ const configLang = ref([
   left: calc(50% - 22.656vw);
 }
 
-@media screen and (max-width: 768px) /*and (orientation: portrait)*/ {
+/*
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+!*  add styles for gorizontal orintation on phone*!
+  .chinese {
+    left: calc(50% - 22.41vw);
+  }
+  .arabic {
+    left: calc(50% + 22.703vw);
+  }
+  .norsk {
+    left: calc(50% - 20.75vw)
+  }
+  .spanish {
+    left: calc(50% - 10.887vw);
+  }
+  .russian {
+    left: calc(50% + 12.547vw)
+  }
+  .portuguese {
+    left: calc(50% + 26.353vw);
+  }
+  .dansk {
+    top: calc(50% - 11.18vw);
+    left: calc(50% - 2.758vw);
+  }
+  .swedish {
+    top: calc(50% - 9.398vw);
+    left: calc(50% + 17.406vw);
+  }
+  .french {
+    left: calc(50% - 24.656vw);
+  }
+  .deutsch {
+    left: calc(50% - 12.328vw);
+  }
+  .english {
+    left: calc(50% + 9.715vw);
+  }
+  .suomi {
+    left: calc(50% + 20.187vw);
+  }
+  .italiano {
+    top: calc(50% + 10.863vw);
+    left: calc(50% - 17.504vw);
+  }
+  .turkish {
+    top: calc(50% + 10.863vw);
+  }
+  .dutch {
+    top: calc(50% + 10.863vw);
+    left: calc(50% + 13.8vw);
+  }
+}
+*/
+
+@media screen and (max-width: 768px){
+
+  .logo {
+    font-size: 9.5vw;
+  }
+
+  .chinese {
+    font-size: 4.4vw;
+    left: calc(50% - 28.41vw);
+  }
+
+  .arabic {
+    font-size: 5vw;
+    left: calc(50% + 29.703vw);
+  }
+
+  .norsk {
+    font-size: 3.653vw;
+    top: calc(50% - 6.5vw);
+    left: calc(50% - 31.75vw);
+  }
+
+  .spanish {
+    font-size: 5.406vw;
+    top: calc(50% - 8.469vw);
+    left: calc(50% - 15.887vw);
+  }
+
+  .korean {
+    font-size: 3.748vw;
+    top: calc(50% - 7.176vw);
+    left: calc(50% + 1.758vw);
+  }
+
+  .russian {
+    font-size: 4.1vw;
+    left: calc(50% + 16.547vw);
+    top: calc(50% - 7.871vw);
+  }
+
+  .portuguese {
+    font-size: 4.725vw;
+    top: calc(50% - 6.371vw);
+    left: calc(50% + 35.353vw);
+  }
+
+  .dansk {
+    font-size: 3.841vw;
+    top: calc(50% - 14.418vw);
+    left: calc(50% - 4.758vw);
+  }
+
+  .swedish {
+    font-size: 3.453vw;
+    top: calc(50% - 12.98vw);
+    left: calc(50% + 26.406vw);
+  }
+
+  .french {
+    font-size: 5.4vw;
+    top: calc(50% + 7.5vw);
+    left: calc(50% - 28.656vw);
+  }
+
+  .deutsch {
+    font-size: 3.548vw;
+    top: calc(50% + 7.7vw);
+    left: calc(50% - 11.4vw);
+  }
+
+  .english {
+    font-size: 5.406vw;
+    top: calc(50% + 7.3vw);
+    left: calc(50% + 17vw);
+  }
+
+  .suomi {
+    font-size: 3.453vw;
+    left: calc(50% + 32.187vw);
+    top: calc(50% + 7.3vw);
+  }
+
+  .italiano {
+    font-size: 3.841vw;
+    top: calc(50% + 13vw);
+    left: calc(50% - 19.504vw);
+  }
+
+  .turkish {
+    font-size: 4.234vw;
+    left: calc(50% + -3.438vw);
+    top: calc(50% + 12.8vw);
+  }
+
+  .dutch {
+    font-size: 3.646vw;
+    top: calc(50% + 13.2vw);
+    left: calc(50% + 22.8vw);
+  }
+
+  .japanese {
+    font-size: 3.3vw;
+    top: calc(50% + 7.7vw);
+    left: calc(50% - -1.7vw);
+  }
+
+}
+
+@media screen and (max-width: 480px) /*and (orientation: portrait)*/ {
   .logo {
     font-size: 10.667vw;
     top: calc(50% - 9.067vw);
@@ -329,75 +492,5 @@ const configLang = ref([
   }
 
 }
-
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-/*  add styles for gorizontal orintation on phone*/
-  .chinese {
-    left: calc(50% - 22.41vw);
-  }
-
-  .arabic {
-    left: calc(50% + 22.703vw);
-  }
-
-  .norsk {
-    left: calc(50% - 20.75vw)
-  }
-
-  .spanish {
-    left: calc(50% - 10.887vw);
-  }
-
-  .russian {
-    left: calc(50% + 12.547vw)
-  }
-
-  .portuguese {
-    left: calc(50% + 26.353vw);
-  }
-
-  .dansk {
-    top: calc(50% - 11.18vw);
-    left: calc(50% - 2.758vw);
-  }
-
-  .swedish {
-    top: calc(50% - 9.398vw);
-    left: calc(50% + 17.406vw);
-  }
-
-  .french {
-    left: calc(50% - 24.656vw);
-  }
-
-  .deutsch {
-    left: calc(50% - 12.328vw);
-  }
-
-  .english {
-    left: calc(50% + 9.715vw);
-  }
-
-  .suomi {
-    left: calc(50% + 20.187vw);
-  }
-
-  .italiano {
-    top: calc(50% + 10.863vw);
-    left: calc(50% - 17.504vw);
-  }
-
-  .turkish {
-    top: calc(50% + 10.863vw);
-  }
-
-  .dutch {
-    top: calc(50% + 10.863vw);
-    left: calc(50% + 13.8vw);
-  }
-}
-
-
-
 
 </style>
