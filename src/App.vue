@@ -20,12 +20,26 @@ provide('isAuth', isAuth);
 </script>
 
 <template>
+  <div class='app'>
     <Header />
-    <router-view></router-view>
-  <Footer />
+      <div class='content'><router-view></router-view></div>
+    <Footer />
+  </div>
 </template>
 
 <style scoped>
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex-grow: 1;
+    margin: calc(var(--height-header) + 15px) auto 0 auto;
+    max-width: var(--max-content-width);
+  }
+
   .wrapper-head {
     margin: 20px var(--common-gorizontal-margin) 0 var(--common-gorizontal-margin);
     display: none;

@@ -61,9 +61,9 @@ onUnmounted(() => {
     <h1 class='h1'>
       <BurgerMenu :toggleMenu='toggleMenu' :isOpen='isOpen' :isEvenOpen='isEvenOpen' />
       <div class='auth-menu-mobile' v-if='!isAuth'>
-        <button>Войти</button>
-        <div>|</div>
-        <button>Регистрация</button>
+        <router-link class='link' :to='PATHS.LOGIN'>Войти</router-link>
+        <div class='separator'>|</div>
+        <router-link class='link' :to='PATHS.LOGIN'>Регистрация</router-link>
       </div>
       <router-link v-if='isAuth' class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>
       <SelectCountry v-if='!isAuth' />
@@ -100,6 +100,7 @@ onUnmounted(() => {
 <style scoped>
 
 header {
+  flex: 0 0 auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -114,12 +115,19 @@ header {
   display: flex;
 }
 
-.auth-menu-mobile button {
-  color: var(--gray);
-  border: none;
+.separator {
+  margin: 0 7px;
 }
 
-.auth-menu-mobile button:active {
+
+.auth-menu-mobile .link {
+  color: var(--gray);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-menu-mobile .link:active {
   transition: var(--transition-click);
   color: var(--active-click-color);
   transform: scale(1.1);

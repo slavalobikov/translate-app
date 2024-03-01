@@ -6,6 +6,7 @@ import Terms from './../pages/Terms.vue'
 import Privacy from './../pages/Privacy.vue'
 import TermsOfUse from './../pages/TermsOfUse.vue'
 import ChooseLanguage from '../pages/ChooseLanguage.vue'
+import Login from './../pages/Login.vue';
 
 const routes = [
   { path: PATHS.HOME, component: Home },
@@ -26,6 +27,7 @@ const routes = [
   { path: PATHS.CONTACT, component: <div>contact</div> },
   { path: PATHS.TERMS_OF_USE, component: TermsOfUse },
   { path: PATHS.CHOOSE_LANG, component: ChooseLanguage },
+  { path: PATHS.LOGIN, component: Login },
 ]
 
 const router = createRouter({

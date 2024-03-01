@@ -44,6 +44,7 @@ import { PATHS } from '../constants/PATHS'
 
 <style scoped>
 footer {
+  flex: 0 0 auto;
   margin: 10px var(--common-gorizontal-margin);
   font-size: 13px;
   display: flex;
