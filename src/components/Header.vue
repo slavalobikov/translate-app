@@ -58,6 +58,7 @@ onUnmounted(() => {
 
 <template>
   <header>
+    test
     <h1 class='h1'>
       <BurgerMenu :toggleMenu='toggleMenu' :isOpen='isOpen' :isEvenOpen='isEvenOpen' />
       <div class='auth-menu-mobile' v-if='!isAuth'>
