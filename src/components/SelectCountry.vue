@@ -136,6 +136,7 @@ const configLang =
     top: calc(var(--height-header) + 10px);
     border: var(--wrapper-content-border);
     padding: 10px;
+    right: -300px;
     animation: slide-from-right var(--transition-click) forwards;
   }
 

@@ -60,8 +60,13 @@ onUnmounted(() => {
   <header>
     <h1 class='h1'>
       <BurgerMenu :toggleMenu='toggleMenu' :isOpen='isOpen' :isEvenOpen='isEvenOpen' />
+      <div class='auth-menu-mobile' v-if='!isAuth'>
+        <button>Войти</button>
+        <div>|</div>
+        <button>Регистрация</button>
+      </div>
       <router-link v-if='isAuth' class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>
-      <SelectCountry />
+      <SelectCountry v-if='!isAuth' />
       <button v-if='isAuth' @click='clickMessage' class='message-wrapper'>
         <IconMail />
         <div class='count-unread'>
@@ -82,7 +87,9 @@ onUnmounted(() => {
       </div>
     </h1>
   </header>
-  <button v-if='isAuth' @click='toggleMenu' :class="{ 'open': isOpen }" class='burger-button'>
+  <button
+    v-if='isAuth'
+    @click='toggleMenu' :class="{ 'open': isOpen }" class='burger-button'>
     <span></span>
     <span></span>
     <span></span>
@@ -98,6 +105,22 @@ header {
   left: 0;
   right: 0;
   height: var(--height-header);
+}
+
+.auth-menu-mobile {
+  position: absolute;
+  left: 20px;
+  display: flex;
+}
+
+.auth-menu-mobile button {
+  border: none;
+}
+
+.auth-menu-mobile button:active {
+  transition: var(--transition-click);
+  color: var(--active-click-color);
+  transform: scale(1.1);
 }
 
 .h1 {
