@@ -274,7 +274,7 @@ const configLang = ref([
 }
 */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
 
   .logo {
     font-size: 9.5vw;
@@ -291,44 +291,27 @@ const configLang = ref([
   }
 
   .norsk {
-/*    font-size: 3.653vw;
-    top: calc(50% - 6.5vw);
-    left: calc(50% - 31.75vw);*/
-
     font-size: 3.653vw;
-    top: calc(50% - 7.5vw);
-    left: calc(50% - 35.75vw);
+    top: calc(50% - 6.5vw);
+    left: calc(50% - 31.75vw);
   }
 
   .spanish {
-/*    font-size: 5.406vw;
-    top: calc(50% - 8.469vw);
-    left: calc(50% - 15.887vw);*/
-
     font-size: 5.406vw;
-    top: calc(50% - 9.469vw);
-    left: calc(50% - 17.887vw);
+    top: calc(50% - 8.469vw);
+    left: calc(50% - 15.887vw);
   }
 
   .korean {
-/*    font-size: 3.748vw;
-    top: calc(50% - 7.176vw);
-    left: calc(50% + 1.758vw);*/
-
     font-size: 3.748vw;
-    top: calc(50% - 9.176vw);
+    top: calc(50% - 7.176vw);
     left: calc(50% + 1.758vw);
   }
 
   .russian {
-/*    font-size: 4.1vw;
-    left: calc(50% + 16.547vw);
-    top: calc(50% - 7.871vw);*/
-
     font-size: 4.1vw;
-    left: calc(50% + 18.547vw);
-    top: calc(50% - 9.871vw);
-    color: red;
+    left: calc(50% + 16.547vw);
+    top: calc(50% - 7.871vw);
   }
 
   .portuguese {
@@ -356,68 +339,44 @@ const configLang = ref([
   }
 
   .deutsch {
-/*    font-size: 3.548vw;
-    top: calc(50% + 7.7vw);
-    left: calc(50% - 11.4vw);*/
     font-size: 3.548vw;
-    top: calc(50% + 8.8vw);
-    left: calc(50% - 13vw);
+    top: calc(50% + 7.7vw);
+    left: calc(50% - 11.4vw);
   }
 
   .english {
-/*    font-size: 5.406vw;
-    top: calc(50% + 7.3vw);
-    left: calc(50% + 17vw);*/
     font-size: 5.406vw;
-    top: calc(50% + 8.3vw);
-    left: calc(50% + 18.3vw);
+    top: calc(50% + 7.3vw);
+    left: calc(50% + 17vw);
   }
 
   .suomi {
-/*    font-size: 3.453vw;
-    left: calc(50% + 32.187vw);
-    top: calc(50% + 7.3vw);*/
     font-size: 3.453vw;
-    left: calc(50% + 34.187vw);
-    top: calc(50% + 8.3vw);
+    left: calc(50% + 32.187vw);
+    top: calc(50% + 7.3vw);
   }
 
   .italiano {
-/*    font-size: 3.841vw;
-    top: calc(50% + 13vw);
-    left: calc(50% - 19.504vw);*/
-
     font-size: 3.841vw;
-    top: calc(50% + 15vw);
+    top: calc(50% + 13vw);
     left: calc(50% - 19.504vw);
   }
 
   .turkish {
-/*    font-size: 4.234vw;
-    left: calc(50% + -3.438vw);
-    top: calc(50% + 12.8vw);*/
-
     font-size: 4.234vw;
     left: calc(50% + -3.438vw);
-    top: calc(50% + 15vw);
+    top: calc(50% + 12.8vw);
   }
 
   .dutch {
-/*    font-size: 3.646vw;
-    top: calc(50% + 13.2vw);
-    left: calc(50% + 22.8vw);*/
-
     font-size: 3.646vw;
-    top: calc(50% + 15.2vw);
+    top: calc(50% + 13.2vw);
     left: calc(50% + 22.8vw);
   }
 
   .japanese {
-/*    font-size: 3.3vw;
-    top: calc(50% + 7.7vw);
-    left: calc(50% - -1.7vw);*/
     font-size: 3.3vw;
-    top: calc(50% + 8.7vw);
+    top: calc(50% + 7.7vw);
     left: calc(50% - -1.7vw);
   }
 
