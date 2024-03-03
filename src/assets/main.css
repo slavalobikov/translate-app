@@ -112,7 +112,3 @@ body {
     font-family: Tahoma,Verdana,Arial;
     background-color: var(--body-backround);
 }
-
-#app {
-    overflow-x: hidden;
-}

@@ -57,8 +57,9 @@ onMounted(() => {
   position: fixed;
   left: 0;
   top: 0;
-  width: var(--width-menu);
   bottom: 0;
+  z-index: 100;
+  width: var(--width-menu);
   background-color: var(--menu-background);
   animation: slide-in-left ease-in-out var(--transition-click) forwards;
   box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.41);

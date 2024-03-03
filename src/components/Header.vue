@@ -60,12 +60,12 @@ onUnmounted(() => {
   <header>
     <h1 class='h1'>
       <BurgerMenu :toggleMenu='toggleMenu' :isOpen='isOpen' :isEvenOpen='isEvenOpen' />
-      <div class='auth-menu-mobile' v-if='!isAuth'>
+<!--      <div class='auth-menu-mobile' v-if='!isAuth'>
         <router-link class='link' :to='PATHS.LOGIN'>Войти</router-link>
         <div class='separator'>|</div>
         <router-link class='link' :to='PATHS.LOGIN'>Регистрация</router-link>
       </div>
-      <router-link v-if='isAuth' class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>
+      <router-link v-if='isAuth' class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>-->
       <SelectCountry v-if='!isAuth' />
       <button v-if='isAuth' @click='clickMessage' class='message-wrapper'>
         <IconMail />
@@ -88,7 +88,6 @@ onUnmounted(() => {
     </h1>
   </header>
   <button
-    v-if='isAuth'
     @click='toggleMenu' :class="{ 'open': isOpen }" class='burger-button'>
     <span></span>
     <span></span>

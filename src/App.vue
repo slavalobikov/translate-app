@@ -5,7 +5,7 @@ import { COUNTRYS } from './constants/COUNTRYS.JS'
 import { provide, ref } from 'vue';
 import { LANGUAGES } from './constants/LANGUAGES.JS'
 
-const isAuth = ref(true);
+const isAuth = ref(false);
 const currentLang = ref(COUNTRYS.JAPANESE);
 
 
