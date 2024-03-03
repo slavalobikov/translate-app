@@ -13,6 +13,25 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 
 const balance = inject('balance', '$00.00 (€00.00)');
 const isAuth = inject('isAuth', false);
+const setIsAuth = inject('setIsAuth', () => {});
+
+const submitAuth = (v) => {
+  const login = v.target[0].value;
+  const password = v.target[1].value;
+  const body = {
+    login_data: login,
+    password,
+  }
+
+  setIsAuth(true)
+  toggleMenu()
+  console.log('request', body)
+}
+
+const submitLogout = () => {
+  setIsAuth(false);
+  toggleMenu();
+}
 
 </script>
 <template>
@@ -47,9 +66,11 @@ const isAuth = inject('isAuth', false);
         Закончить?
       </div>
       <div class='wrapper-content'>
-        <Button >
-          Выход
-        </Button>
+        <form @submit.prevent="submitLogout" class='logout-form'>
+          <Button >
+            Выход
+          </Button>
+        </form>
       </div>
     </div>
     <div v-if='!isAuth'>
@@ -67,10 +88,10 @@ const isAuth = inject('isAuth', false);
         Проверить почту
       </div>
       <div class='wrapper-content'>
-        <form class='form-auth'>
+        <form @submit.prevent="submitAuth" class='form-auth'>
           <label>
             <div>Ваш логин или E-mail</div>
-            <input type='text'>
+            <input name='email' type='text'>
           </label>
           <label>
             <div>Ваш пароль</div>
@@ -173,6 +194,10 @@ const isAuth = inject('isAuth', false);
 
   .form-auth label input, .form-forgot-password label input {
     margin-top: 3px;
+    width: 100%;
+  }
+
+  .logout-form button {
     width: 100%;
   }
 

@@ -13,8 +13,14 @@ const changeCurrentLang = (lang) => {
   currentLang.value = lang
 }
 
+const setIsAuth = (auth) => {
+  console.log('auth', auth)
+  isAuth.value = auth
+}
+
 provide('balance', '$12.00 (€11.21)');
 provide('currentLang', currentLang);
+provide('setIsAuth', setIsAuth);
 provide('changeCurrentLang', changeCurrentLang);
 provide('isAuth', isAuth);
 </script>
