@@ -22,6 +22,6 @@
     width: 16px;
     height: 16px;
     background-position: 0 -133px;
-    background: url(./src/assets/flags.png) no-repeat top left;
+    background: url(https://translation.gallery/ru/images/sprites/flags.png) no-repeat top left;
   }
 </style>
