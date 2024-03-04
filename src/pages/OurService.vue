@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue';
 import TranslationGallery from './../components/TranslationGallery.vue'
-import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue'
+import Prices from './../components/Prices.vue'
 
   const configPrices = ref([
     {id: 0, from: 'Arabic', to: 'Spanish', count: '$1.5087755 (€1.39)'},
@@ -161,13 +161,8 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
   <div class='wrapper-content'>
     <div class='p'>
       1. The cost for 100 symbols is:
-      <ul>
-        <li v-for='item in configPrices' :key='item.id'>
-          {{ item.from }} - {{ item.to }} - {{ item.count }}
-        </li>
-      </ul>
+      <Prices />
     </div>
-
     <p>
       Note: please keep in mind that the structure of Chinese, Japanese and Korean languages is
       significantly different from the structure of European and Slavic languages. A symbol
@@ -201,7 +196,6 @@ import TranslationTagLine from './../components/TranslateTaglineOnEndMessage.vue
       questions, suggestions, remarks, please,
     </p>
 
-    <TranslationTagLine />
   </div>
 </template>
 
