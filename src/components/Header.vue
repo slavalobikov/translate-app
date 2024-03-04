@@ -86,6 +86,7 @@ onUnmounted(() => {
         <br />
         <button>Регистрация</button>
       </div>
+      <SelectCountryRectangle />
     </h1>
   </header>
   <button
@@ -94,7 +95,6 @@ onUnmounted(() => {
     <span></span>
     <span></span>
   </button>
-  <SelectCountryRectangle />
 </template>
 
 
