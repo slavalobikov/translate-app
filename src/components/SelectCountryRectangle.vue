@@ -26,14 +26,14 @@ const configLang =
 
 const lang = inject('currentLang', COUNTRYS.ENGLISH)
 const isAuth = inject('isAuth', false)
+const isEvenFlagList = inject('isEvenFlagList', false)
+const isFlagListOpen = inject('isFlagListOpen', false)
 const changeCurrentLang = inject('changeCurrentLang', () => {})
 
 
 const currentLang = ref(configLang.find(el => el.country === lang.value)?.lang)
-const flagList = ref(null);
-const isFlagListOpen = ref(false);
-const isEvenFlagList = ref(false);
-const outsideRef = ref(null)
+/*const isFlagListOpen = ref(false);
+const isEvenFlagList = ref(false);*/
 
 
 const clickUserMenu = () => {
@@ -59,7 +59,6 @@ watch(() => lang.value, (newLang) => {
     <div class='flag' :class="lang" /> {{currentLang}}
   </button>
   <div
-    :ref='flagList'
     :class="{
       'flag-list-open' : isFlagListOpen,
        'flag-list-close': !isFlagListOpen,

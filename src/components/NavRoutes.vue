@@ -13,6 +13,7 @@ const { toggleMenu } = defineProps(['toggleMenu'])
 
 const balance = inject('balance', '$00.00 (€00.00)');
 const isAuth = inject('isAuth', false);
+const closeFlagListAnimation = inject('closeFlagListAnimation', () => {});
 const setIsAuth = inject('setIsAuth', () => {});
 
 const submitAuth = (v) => {
@@ -25,12 +26,14 @@ const submitAuth = (v) => {
 
   setIsAuth(true)
   toggleMenu()
+  closeFlagListAnimation()
   console.log('request', body)
 }
 
 const submitLogout = () => {
   setIsAuth(false);
   toggleMenu();
+  closeFlagListAnimation()
 }
 
 </script>

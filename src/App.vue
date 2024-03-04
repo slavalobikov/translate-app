@@ -8,6 +8,14 @@ import { LANGUAGES } from './constants/LANGUAGES.JS'
 const isAuth = ref(false);
 const currentLang = ref(COUNTRYS.JAPANESE);
 
+const isFlagListOpen = ref(false);
+const isEvenFlagList = ref(false);
+
+const closeFlagListAnimation = () => {
+  isFlagListOpen.value = false;
+  isEvenFlagList.value = false;
+}
+
 
 const changeCurrentLang = (lang) => {
   currentLang.value = lang
@@ -19,6 +27,9 @@ const setIsAuth = (auth) => {
 }
 
 provide('balance', '$12.00 (€11.21)');
+provide('isFlagListOpen', isFlagListOpen);
+provide('isEvenFlagList', isEvenFlagList);
+provide('closeFlagListAnimation', closeFlagListAnimation);
 provide('currentLang', currentLang);
 provide('setIsAuth', setIsAuth);
 provide('changeCurrentLang', changeCurrentLang);

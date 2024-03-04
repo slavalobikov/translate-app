@@ -10,6 +10,8 @@ import { PATHS } from '../constants/PATHS'
 
 const isAuth = inject('isAuth', false)
 const balance = inject('balance', '$00.00 (€00.00)')
+const isEvenFlagList = inject('isEvenFlagList', false)
+const isFlagListOpen = inject('isFlagListOpen', false)
 
 const userMenuRef = ref(null)
 const userBtnRef = ref(null)
@@ -22,6 +24,9 @@ const isEvenMenuUser = ref(false)
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
   isEvenOpen.value = true
+  if (isEvenFlagList.value && isFlagListOpen.value) {
+    isFlagListOpen.value = false
+  }
 }
 
 const clickMessage = () => {
