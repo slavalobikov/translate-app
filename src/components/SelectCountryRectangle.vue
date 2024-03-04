@@ -19,9 +19,10 @@
   }
 
   .english {
+    display: inline-block;
     width: 16px;
     height: 16px;
-    background-position: 0 -133px;
     background: url(https://translation.gallery/ru/images/sprites/flags.png) no-repeat top left;
+    background-position: 0 -57px;
   }
 </style>
