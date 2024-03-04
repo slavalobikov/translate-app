@@ -3,6 +3,7 @@ import BurgerMenu from './BurgerMenu.vue'
 import IconMail from './icons/IconMail.vue'
 import IconUser from './icons/IconUser.vue'
 import SelectCountry from './SelectCountry.vue'
+import SelectCountryRectangle from './SelectCountryRectangle.vue'
 import { inject, ref, onMounted, onUnmounted } from 'vue'
 import router from '../routes/router'
 import { PATHS } from '../constants/PATHS'
@@ -66,7 +67,7 @@ onUnmounted(() => {
         <router-link class='link' :to='PATHS.LOGIN'>Регистрация</router-link>
       </div>
       <router-link v-if='isAuth' class='balance' :to='PATHS.ADD_FUNDS'>{{ balance }}</router-link>-->
-      <SelectCountry v-if='!isAuth' />
+<!--      <SelectCountry v-if='!isAuth' />-->
       <button v-if='isAuth' @click='clickMessage' class='message-wrapper'>
         <IconMail />
         <div class='count-unread'>
@@ -93,6 +94,7 @@ onUnmounted(() => {
     <span></span>
     <span></span>
   </button>
+  <SelectCountryRectangle />
 </template>
 
 
@@ -142,6 +144,7 @@ header {
   justify-content: end;
   align-items: center;
   position: relative;
+  height: var(--height-header);
   padding: 10px;
 }
 
